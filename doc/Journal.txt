@@ -1,0 +1,8 @@
+[time] Nov.15
+[task done]
+Xinyu
+  - Added doc folder to the project
+Changze
+  - 
+Lianhao
+  - Leaning firebase
