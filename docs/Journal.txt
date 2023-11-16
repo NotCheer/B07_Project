@@ -5,4 +5,4 @@ Xinyu
 Changze
   - Leaning firebase
 Lianhao
-  - Leaning firebase
+  - Leaning firebase, create Authentication and Realtime Database
