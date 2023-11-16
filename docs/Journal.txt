@@ -3,6 +3,6 @@
 Xinyu
   - Added doc folder to the project
 Changze
-  - 
+  - Leaning firebase
 Lianhao
   - Leaning firebase
