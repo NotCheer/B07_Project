@@ -6,3 +6,8 @@ Changze
   - Leaning firebase
 Lianhao
   - Leaning firebase, create Authentication and Realtime Database
+
+[time] Nov.17
+[task done]
+Delun
+  - Started the POST check page
