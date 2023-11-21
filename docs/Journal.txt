@@ -6,6 +6,27 @@ Xinyu
 Xinyu
   - Integrate announcement with fire base
   - Implement announcement in home page
+Lianhao
+  - Finish the Activity of Login
+----------------------------------------
+[time] Nov.20
+[task done]
+Lianhao
+  - Finish the Activity of Signup
+
+-----------------------------------------
+
+[time] Nov.19
+[task done]
+Lianhao
+  - Doing Lab4
+
+-----------------------------------------
+[time] Nov.18
+[task done]
+Lianhao
+  - Finish the Layout of SignUp
+
 -----------------------------------------
 [time] Nov.17
 [task done]
@@ -13,6 +34,8 @@ Delun
   - Started the POST check page
 Xinyu
   - Finished announcement.java
+Lianhao
+  - Finish the Layout of Login
 
 -----------------------------------------
 [time] Nov.16
