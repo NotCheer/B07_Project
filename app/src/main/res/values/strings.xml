@@ -10,4 +10,9 @@
     <string name="identity_student_or_admin">Identity:student or admin</string>
     <string name="login">Login</string>
     <string name="name"> Name: </string>
+    <string name="element_text">Test string for recyclerView</string>
+    <string name="Ann">Announcement\n</string>
+    <string name="title_feed">Feedback\n</string>
+    <string name="title_event">Event\n</string>
+    <string name="title_Check">CheckPOSt</string>
 </resources>
