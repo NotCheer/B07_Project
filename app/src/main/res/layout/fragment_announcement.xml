@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.announcement.HomeFragment">
+    tools:context=".ui.announcement.AnnouncementFragment">
 
     <TextView
         android:id="@+id/announcement_wrapper"
