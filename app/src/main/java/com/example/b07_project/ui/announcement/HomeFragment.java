@@ -1,4 +1,4 @@
-package com.example.b07_project.ui.home;
+package com.example.b07_project.ui.announcement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

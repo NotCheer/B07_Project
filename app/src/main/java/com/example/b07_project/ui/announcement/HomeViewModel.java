@@ -1,4 +1,4 @@
-package com.example.b07_project.ui.home;
+package com.example.b07_project.ui.announcement;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
