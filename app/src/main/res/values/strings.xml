@@ -1,15 +1,13 @@
 <resources>
     <string name="app_name">B07_Project</string>
-    <string name="title_event">Events</string>
-    <string name="title_feed">Feedback</string>
-    <string name="title_Check">Check POSt</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <string name="register">Sign up</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm_password</string>
     <string name="identity_student_or_admin">Identity:student or admin</string>
     <string name="login">Login</string>
-    <string name = "Ann">Announcement</string>
-    <string name="element_text">\"Announcement #\"</string>
+    <string name="name"> Name: </string>
 </resources>
-
