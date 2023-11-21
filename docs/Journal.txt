@@ -1,3 +1,25 @@
+[time] Nov.21
+[task done]
+Xinyu
+  - Finished work on Announcement module
+[TODO]
+Xinyu
+  - Integrate announcement with fire base
+  - Implement announcement in home page
+-----------------------------------------
+[time] Nov.17
+[task done]
+Delun
+  - Started the POST check page
+Xinyu
+  - Finished announcement.java
+
+-----------------------------------------
+[time] Nov.16
+[task done]
+  - All member reviewing cscb36, nothing done
+
+-----------------------------------------
 [time] Nov.15
 [task done]
 Xinyu
@@ -7,7 +29,4 @@ Changze
 Lianhao
   - Leaning firebase, create Authentication and Realtime Database
 
-[time] Nov.17
-[task done]
-Delun
-  - Started the POST check page
+
