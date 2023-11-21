@@ -10,5 +10,6 @@
     <string name="identity_student_or_admin">Identity:student or admin</string>
     <string name="login">Login</string>
     <string name = "Ann">Announcement</string>
+    <string name="element_text">\"Announcement #\"</string>
 </resources>
 

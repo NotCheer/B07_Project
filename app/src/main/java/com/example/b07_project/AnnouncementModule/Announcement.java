@@ -1,14 +1,14 @@
 package com.example.b07_project.AnnouncementModule;
 
-import java.text.DateFormat;
+import java.util.Date;
 
 public class Announcement {
 	private String title;
     private String content;
-    private DateFormat date;
+    private Date date;
 
     //Getters and Setter
-    public Announcement(String title, String content, DateFormat date) {
+    public Announcement(String title, String content, Date date) {
     	this.title=title;
     	this.content=content;
     	this.date=date;
@@ -30,11 +30,11 @@ public class Announcement {
 		this.content = content;
 	}
 
-	public DateFormat getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(DateFormat date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 }
