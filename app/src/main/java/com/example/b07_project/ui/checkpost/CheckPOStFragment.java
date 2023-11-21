@@ -1,4 +1,4 @@
-package com.example.b07_project.ui.notifications;
+package com.example.b07_project.ui.checkpost;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.b07_project.databinding.FragmentNotificationsBinding;
+import com.example.b07_project.databinding.FragmentCheckpostBinding;
 
-public class NotificationsFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+public class CheckPOStFragment extends Fragment {
+
+    private FragmentCheckpostBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        CheckPOStViewModel notificationsViewModel =
+                new ViewModelProvider(this).get(CheckPOStViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentCheckpostBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
+        final TextView textView = binding.textCheckpost;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
