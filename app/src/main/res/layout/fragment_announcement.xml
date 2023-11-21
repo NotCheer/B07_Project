@@ -7,7 +7,7 @@
     tools:context=".ui.announcement.AnnouncementFragment">
 
     <TextView
-        android:id="@+id/announcement_wrapper"
+        android:id="@+id/text_annoucement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

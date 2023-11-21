@@ -63,9 +63,9 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
 
         public AnnouncementViewHolder(@NonNull View itemView) {
             super(itemView);
-            titleTextView = itemView.findViewById(R.id.announcement_wrapper);
-            contentTextView = itemView.findViewById(R.id.announcement_wrapper);
-            dateTextView = itemView.findViewById(R.id.announcement_wrapper);
+            titleTextView = itemView.findViewById(R.id.text_annoucement);
+            contentTextView = itemView.findViewById(R.id.text_annoucement);
+            dateTextView = itemView.findViewById(R.id.text_annoucement);
         }
 
         public void bind(Announcement announcement) {

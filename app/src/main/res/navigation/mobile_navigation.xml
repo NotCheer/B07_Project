@@ -13,19 +13,19 @@
 
     <fragment
         android:id="@+id/navigation_feedback"
-        android:name="com.example.b07_project.ui.dashboard.DashboardFragment"
+        android:name="com.example.b07_project.ui.feedback.FeedbackFragment"
         android:label="@string/title_feed"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_feedbacks" />
 
     <fragment
         android:id="@+id/navigation_events"
-        android:name="com.example.b07_project.ui.notifications.NotificationsFragment"
+        android:name="com.example.b07_project.ui.events.EventsFragment"
         android:label="@string/title_event"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_events" />
 
     <fragment
         android:id="@+id/navigation_CheckPOSt"
-        android:name="com.example.b07_project.ui.notifications.NotificationsFragment"
+        android:name="com.example.b07_project.ui.checkpost.CheckPOStFragment"
         android:label="@string/title_Check"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_checkpost" />
 </navigation>
