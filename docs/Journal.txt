@@ -12,6 +12,8 @@ Changze
   - Finish the other three functions'ui(ie. CheckPOSt, Events, Feedback)
     ·including each ui fragment & viewmodel
     ·including each fragment.xml
+Delun
+  - Started the conditions of POSTCheck
 ----------------------------------------
 [time] Nov.20
 [task done]
@@ -19,6 +21,8 @@ Lianhao
   - Finish the Activity of Signup
 Xinyu
   - Implementing recycler view
+Delun
+  - Choose a select bar on POSTCheck for convienince
 
 -----------------------------------------
 
@@ -40,6 +44,8 @@ Changze
   - Finish the fragment_announcement and revise the ui of file Annoucenment
 Xinyu
   - Choosing view
+Delun
+  - Working on the UI page of POSTCHeck
 
 -----------------------------------------
 [time] Nov.17
