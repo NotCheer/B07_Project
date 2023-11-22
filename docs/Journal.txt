@@ -8,6 +8,10 @@ Xinyu
   - Implement announcement in home page
 Lianhao
   - Finish the Activity of Login
+Changze
+  - Finish the other three functions'ui(ie. CheckPOSt, Events, Feedback)
+    ·including each ui fragment & viewmodel
+    ·including each fragment.xml
 ----------------------------------------
 [time] Nov.20
 [task done]
@@ -20,12 +24,16 @@ Lianhao
 [task done]
 Lianhao
   - Doing Lab4
+Changze
+  - Finish the ui of Annoucenment inclusing Fragment & ViewModel
 
 -----------------------------------------
 [time] Nov.18
 [task done]
 Lianhao
   - Finish the Layout of SignUp
+Changze
+  - Finish the fragment_announcement and revise the ui of file Annoucenment
 
 -----------------------------------------
 [time] Nov.17
@@ -36,6 +44,9 @@ Xinyu
   - Finished announcement.java
 Lianhao
   - Finish the Layout of Login
+Changze
+  - Import the icon of each function(ie. Announcement, checkPOSt..)
+  - Change the code of fragment_announcement
 
 -----------------------------------------
 [time] Nov.16
