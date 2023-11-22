@@ -17,6 +17,8 @@ Changze
 [task done]
 Lianhao
   - Finish the Activity of Signup
+Xinyu
+  - Implementing recycler view
 
 -----------------------------------------
 
@@ -26,6 +28,8 @@ Lianhao
   - Doing Lab4
 Changze
   - Finish the ui of Annoucenment inclusing Fragment & ViewModel
+Xinyu
+  - Finalizing announcement fragment
 
 -----------------------------------------
 [time] Nov.18
@@ -34,6 +38,8 @@ Lianhao
   - Finish the Layout of SignUp
 Changze
   - Finish the fragment_announcement and revise the ui of file Annoucenment
+Xinyu
+  - Choosing view
 
 -----------------------------------------
 [time] Nov.17
