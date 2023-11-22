@@ -10,7 +10,7 @@ public class FeedbackViewModel extends ViewModel {
 
     public FeedbackViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Events fragment");
+        mText.setValue("This is Feedback fragment");
     }
 
     public LiveData<String> getText() {
