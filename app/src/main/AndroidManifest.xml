@@ -13,7 +13,11 @@
         android:theme="@style/Theme.Material3.Light"
         tools:targetApi="31">
         <activity
-            android:name=".StudentsActivity"
+            android:name=".StudentsMain"
+            android:exported="true"
+            />
+        <activity
+            android:name=".AdminMain"
             android:exported="true"
             />
         <activity
