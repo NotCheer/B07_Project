@@ -2,7 +2,7 @@
 [task done]
 Xinyu
   - Finished work on Announcement module
-[TODO]
+[to do]
 Xinyu
   - Integrate announcement with fire base
   - Implement announcement in home page
