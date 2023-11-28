@@ -23,15 +23,15 @@ public class StudentsMain extends AppCompatActivity {
         binding = ActivityStudentsMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+        BottomNavigationView navView = findViewById(R.id.nav_student_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_announcement, R.id.navigation_feedback, R.id.navigation_events,
                 R.id.navigation_CheckPOSt).build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main_students);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(binding.navStudentView, navController);
     }
 
 }

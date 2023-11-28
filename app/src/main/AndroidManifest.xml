@@ -17,6 +17,10 @@
             android:exported="true"
             />
         <activity
+            android:name=".AdminMain"
+            android:exported="true"
+            />
+        <activity
             android:name=".Register"
             android:exported="false"
             />
