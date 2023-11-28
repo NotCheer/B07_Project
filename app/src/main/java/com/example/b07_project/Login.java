@@ -70,7 +70,7 @@ public class Login extends AppCompatActivity {
                                             getValue(String.class);
                                     if((emails.equals(email) && passwords.equals(password))) {
                                         Intent intent = new Intent(Login.this,
-                                                MainActivity.class);
+                                                StudentsMain.class);
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(Login.this,
