@@ -15,4 +15,8 @@
     <string name="title_feed">Feedback\n</string>
     <string name="title_event">Event\n</string>
     <string name="title_Check">CheckPOSt</string>
+    <string name = "post">Post</string>
+    <string name="view">ViewEvents</string>
+    <string name="schedule">Schedule</string>
+    <string name="complaint">Complaints</string>
 </resources>
