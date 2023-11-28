@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_post"
+        android:icon="@drawable/ic_stat_name"
+        android:title="@string/post"/>
+
+    <item
+        android:title="@string/view"
+        android:icon="@drawable/view"
+        android:id="@+id/navigation_view"/>
+
+    <item
+        android:id="@+id/navigation_schedule"
+        android:title="@string/schedule"
+        android:icon="@drawable/schedule"/>
+
+    <item
+        android:icon="@drawable/complaints"
+        android:title="@string/complaint"
+        android:id="@+id/navigation_complaints"/>
+
+</menu>
