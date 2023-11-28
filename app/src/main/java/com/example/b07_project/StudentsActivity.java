@@ -10,17 +10,17 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.b07_project.databinding.ActivityMainBinding;
+import com.example.b07_project.databinding.ActivityStudentsMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class StudentsActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityStudentsMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityStudentsMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
