@@ -47,5 +47,9 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-database")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
 
 }

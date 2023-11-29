@@ -34,4 +34,7 @@ public class StudentsMain extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navStudentView, navController);
     }
 
+
+
+
 }
