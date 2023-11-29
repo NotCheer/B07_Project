@@ -1,22 +1,30 @@
 [time] Nov.28
 Changze
   - make admin switch fragments
+Xinyu
+  - Finished integrating announcement
 ----------------------------------------
 [time] Nov.27
 Delun
   - Finished Backend of PostCheck
 Changze
   - Finish admin UI interface
+Xinyu
+  - Finished Integrating firebase
 
 ----------------------------------------
 [time] Nov.26
 Delun
   - Finished UI page of PostCheck
+Xinyu
+  - debugging
 ----------------------------------------
 [time] Nov.25
 Changze
   - Finish students UI interface
   - make switch students fragments
+Xinyu
+  - debuging
   
 
 ----------------------------------------
@@ -24,6 +32,8 @@ Changze
 Changze
   - Finish initial AnnoucementFragment.java
   - Finish initial CheckPostFragment.java
+Xinyu
+  - Starting integrating announcement
 ----------------------------------------
 [time] Nov.23
 Delun
