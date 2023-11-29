@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.b07_project.AnnouncementModule.Announcement;
 import com.example.b07_project.AnnouncementModule.AnnouncementAdapter;
-import com.example.b07_project.MainActivity;
+import com.example.b07_project.StudentsMain;
 import com.example.b07_project.R;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class AnnouncementActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnnouncementActivity.this, MainActivity.class);
+                Intent intent = new Intent(AnnouncementActivity.this, StudentsMain.class);
                 startActivity(intent);
             }
         });

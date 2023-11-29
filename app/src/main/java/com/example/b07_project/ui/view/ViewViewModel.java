@@ -1,16 +1,16 @@
-package com.example.b07_project.ui.feedback;
+package com.example.b07_project.ui.view;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class FeedbackViewModel extends ViewModel {
 
+public class ViewViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public FeedbackViewModel() {
+    public ViewViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Feedback fragment");
+        mText.setValue("This is ViewEvents fragment");
     }
 
     public LiveData<String> getText() {

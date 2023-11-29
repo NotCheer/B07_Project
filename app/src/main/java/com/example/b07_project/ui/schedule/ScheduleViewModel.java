@@ -1,16 +1,17 @@
-package com.example.b07_project.ui.feedback;
+package com.example.b07_project.ui.schedule;
+
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class FeedbackViewModel extends ViewModel {
+public class ScheduleViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public FeedbackViewModel() {
+    public ScheduleViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Feedback fragment");
+        mText.setValue("This is Schedule fragment");
     }
 
     public LiveData<String> getText() {

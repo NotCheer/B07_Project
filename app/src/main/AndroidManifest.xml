@@ -10,14 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.B07_Project"
+        android:theme="@style/Theme.Material3.Light"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".StudentsMain"
             android:exported="true"
             />
         <activity
-            android:name=".ui.announcement.AnnouncementActivity"
+            android:name=".AdminMain"
             android:exported="true"
             />
         <activity

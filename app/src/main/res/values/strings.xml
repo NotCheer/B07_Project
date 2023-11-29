@@ -16,4 +16,8 @@
     <string name="title_event">Event\n</string>
     <string name="title_Check">CheckPOSt</string>
     <string name="back">back</string>
+    <string name = "post">Post</string>
+    <string name="view">ViewEvents</string>
+    <string name="schedule">Schedule</string>
+    <string name="complaint">Complaints</string>
 </resources>

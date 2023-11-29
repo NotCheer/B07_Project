@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.b07_project.MainActivity;
+import com.example.b07_project.StudentsMain;
 import com.example.b07_project.R;
 import com.example.b07_project.ui.announcement.AnnouncementActivity;
 import com.example.b07_project.ui.announcement.AnnouncementFragment;

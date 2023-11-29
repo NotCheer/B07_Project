@@ -10,7 +10,7 @@ public class CheckPOStViewModel extends ViewModel {
 
     public CheckPOStViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is CheckPOSt fragment");
     }
 
     public LiveData<String> getText() {
