@@ -1,3 +1,27 @@
+[time] Nov.28
+
+----------------------------------------
+[time] Nov.27
+Delun
+  - Finished Backend of PostCheck
+----------------------------------------
+[time] Nov.26
+Delun
+  - Finished UI page of PostCheck
+----------------------------------------
+[time] Nov.25
+
+----------------------------------------
+[time] Nov.24
+
+----------------------------------------
+[time] Nov.23
+Delun
+  - Choose to use selection bar for options to students.
+----------------------------------------
+[time] Nov.22
+
+----------------------------------------
 [time] Nov.21
 [task done]
 Xinyu
