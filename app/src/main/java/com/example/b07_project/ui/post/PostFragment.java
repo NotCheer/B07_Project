@@ -18,7 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.example.b07_project.databinding.FragmentPostBinding;
+import com.example.b07_project.databinding.FragmentPostannBinding;
 import com.google.firebase.database.ValueEventListener;
 
 public class PostFragment extends Fragment {
