@@ -3,6 +3,7 @@ package com.example.b07_project.ui.announcement;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,16 +21,25 @@ public class AnnouncementActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcement_display);
 
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            AnnouncementFragment fragment = new AnnouncementFragment();
+            transaction.replace(R.id.sample_content_fragment, fragment);
+            transaction.commit();
+        }
+        /*
         // data to populate the RecyclerView with
-        ArrayList<Announcement> animalNames = new ArrayList<>();
-        Announcement announcement = new Announcement("aaa","bbb",new Date(2003,12,4));
-        animalNames.add(announcement);
+        ArrayList<Announcement> announcements = new ArrayList<>();
+        Announcement announcement = new Announcement("aaa","bbb","2003/12/4)");
+        announcements.add(announcement);
 
         // set up the RecyclerView
         RecyclerView recyclerView = findViewById(R.id.list_announcement);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new AnnouncementAdapter(this, animalNames);
+        adapter = new AnnouncementAdapter(announcements);
         recyclerView.setAdapter(adapter);
+
+         */
     }
 
 }

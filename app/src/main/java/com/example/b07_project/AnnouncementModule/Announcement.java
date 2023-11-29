@@ -5,10 +5,10 @@ import java.util.Date;
 public class Announcement {
 	private String title;
     private String content;
-    private Date date;
+    private String date;
 
     //Getters and Setter
-    public Announcement(String title, String content, Date date) {
+    public Announcement(String title, String content, String date) {
     	this.title=title;
     	this.content=content;
     	this.date=date;
@@ -30,11 +30,11 @@ public class Announcement {
 		this.content = content;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 }

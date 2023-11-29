@@ -16,41 +16,48 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
     private List<Announcement> announcementList;
     private LayoutInflater mInflater;
 
+    public void setAnnouncements(List<Announcement> announcementList) {
+        this.announcementList = announcementList;
+    }
+
     public static class AnnouncementViewHolder extends RecyclerView.ViewHolder {
         private final TextView contentTextView;
+        private final TextView titleTextView;
+        private final TextView dateTextView;
+
+        public AnnouncementViewHolder(@NonNull View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+            contentTextView = itemView.findViewById(R.id.lineAnnouncementContent);
+            titleTextView = itemView.findViewById(R.id.lineAnnouncementTitle);
+            dateTextView = itemView.findViewById(R.id.lineAnnouncementDate);
+        }
 
         public TextView getContentTextView() {
             return contentTextView;
         }
-
-        public AnnouncementViewHolder(@NonNull View itemView) {
-            super(itemView);
-            contentTextView = itemView.findViewById(R.id.list_announcement);
-            //itemView.setOnClickListener((View.OnClickListener) this);
+        public TextView getTitleTextView() {
+            return titleTextView;
         }
-
-        public TextView getTextView() {
-            return contentTextView;
-        }
-
-        public void bind(Announcement announcement) {
-            contentTextView.setText(announcement.getContent());
+        public TextView getDateTextView() {
+            return dateTextView;
         }
     }
 
-    public AnnouncementAdapter(Context context,List<Announcement> announcementList) {
-        this.mInflater = LayoutInflater.from(context);
+    public AnnouncementAdapter(List<Announcement> announcementList) {
         this.announcementList = announcementList;
     }
 
-    public void setAnnouncements(Context context, List<Announcement> announcements) {
-        this.announcementList = announcements;
-    }
-    @NonNull
     @Override
     public AnnouncementViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup,
                                                                          int viewType) {
-        View view = mInflater.inflate(R.layout.text_row_item, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.text_row_item, viewGroup, false);
 
         return new AnnouncementViewHolder(view);
 
@@ -59,11 +66,14 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
     @Override
     public void onBindViewHolder(@NonNull AnnouncementViewHolder holder, final int position) {
         Announcement a = announcementList.get(position);
-        holder.contentTextView.setText(String.format("%s\n%s\n%s", a.getTitle(), a.getContent(), a.getDate()));
+        holder.getTitleTextView().setText(a.getTitle());
+        holder.getContentTextView().setText(a.getContent());
+        holder.getDateTextView().setText(a.getDate());
     }
 
     @Override
     public int getItemCount() {
+        if (announcementList==null) return 0;
         return announcementList.size();
     }
 

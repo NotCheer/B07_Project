@@ -24,26 +24,82 @@ import com.example.b07_project.databinding.FragmentAnnouncementBinding;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnnouncementFragment extends Fragment {
 
-    private FragmentAnnouncementBinding binding;
-    private AnnouncementAdapter announcementAdapter;
-    private List<Announcement> announcementList;
+    private List<Announcement> announcementSet;
+
+    private static final String TAG = "RecyclerViewFragment";
+    private static final String KEY_LAYOUT_MANAGER = "layoutManager";
+    protected RecyclerView mRecyclerView;
+    protected AnnouncementAdapter mAdapter;
+    protected RecyclerView.LayoutManager mLayoutManager;
+
+    private DatabaseReference announcementRef;
+    private FirebaseDatabase db;
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initDataset();
+    }
+
+    public void setAnnouncementSet (List<Announcement> ann) {
+        this.announcementSet = ann;
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        AnnouncementViewModel announcementViewModel =
-                new ViewModelProvider(this).get(AnnouncementViewModel.class);
+        View rootView = inflater.inflate(R.layout.recycler_view_fragment, container, false);
+        rootView.setTag(TAG);
 
-        binding = FragmentAnnouncementBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        //final TextView textView = binding.textAnnoucement;
-        //announcementViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        //init RecyclerView
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mAdapter = new AnnouncementAdapter(announcementSet);
+        mRecyclerView.setAdapter(mAdapter);
+        return rootView;
     }
+
+    private void initDataset() {
+        db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb." +
+                "firebaseio.com/");
+        announcementRef = db.getReference();
+        announcementRef.child("announcements").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<Announcement> announcementList = new ArrayList<Announcement>();
+                int index = 0;
+                long max = dataSnapshot.getChildrenCount();
+
+                Log.d("retriever", "retrieving");
+
+                while (index < max) {
+                    // Get the values from the dataSnapshot and create an Announcement object
+                    Log.d("retriever", "looping");
+                    String ID = Integer.toString(index);
+                    String title = dataSnapshot.child(ID).child("title").getValue(String.class);
+                    String content = dataSnapshot.child(ID).child("content").getValue(String.class);
+                    String date = dataSnapshot.child(ID).child("date").getValue(String.class);
+
+                    Announcement announcement = new Announcement(title, content, date);
+                    Log.d("retriever", "have: "+announcement.getContent());
+                    announcementList.add(announcement);
+                    index++;
+                }
+                setAnnouncementSet(announcementList);
+
+            }
+
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle the error case, if any
+            }
+        });
+    }
+
+
     /**
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -68,34 +124,7 @@ public class AnnouncementFragment extends Fragment {
         return view;
     }
 
-    private void retrieveAnnouncementData() {
-        DatabaseReference announcementsRef = FirebaseDatabase.getInstance().getReference("announcements");
 
-        announcementsRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                List<Announcement> announcementList = null;
-
-                for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
-                    Announcement announcement = childSnapshot.getValue(Announcement.class);
-                    announcementList.add(announcement);
-                }
-
-                announcementAdapter.setAnnouncements(announcementList);
-                // announcementAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Handle any errors that occurred
-            }
-        });
     }
     */
-
-        @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
 }
