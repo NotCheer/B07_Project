@@ -11,7 +11,7 @@ public class PostViewModel extends ViewModel {
 
     public PostViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Post fragment");
+        mText.setValue("Please Edit your Announcement!");
     }
 
     public LiveData<String> getText() {
