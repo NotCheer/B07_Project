@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class CheckPostFragment extends Fragment {
+public class CheckPOStFragment extends Fragment {
     /*
         //private FragmentPostBinding binding;
 //
