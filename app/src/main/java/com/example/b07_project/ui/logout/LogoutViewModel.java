@@ -1,17 +1,16 @@
-package com.example.b07_project.ui.post;
-
+package com.example.b07_project.ui.logout;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PostViewModel extends ViewModel {
+public class LogoutViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public PostViewModel() {
+    public LogoutViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Please Edit your Announcement!");
+        mText.setValue("If you want to log out, then press the button below!");
     }
 
     public LiveData<String> getText() {

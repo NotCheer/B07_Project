@@ -55,7 +55,6 @@ public class PostFragment extends Fragment {
         buttonPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the post button click event
                 postAnnouncement();
             }
         });

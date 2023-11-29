@@ -28,4 +28,11 @@
         android:name="com.example.b07_project.ui.checkpost.CheckPOStFragment"
         android:label="@string/title_Check"
         tools:layout="@layout/fragment_checkpost" />
+
+    <fragment
+        android:id="@+id/navigation_logout"
+        android:name="com.example.b07_project.ui.logout.LogoutFragment"
+        android:label="@string/logout"
+        tools:layout="@layout/fragment_logout"/>
+
 </navigation>
