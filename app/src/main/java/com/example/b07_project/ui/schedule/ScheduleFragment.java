@@ -57,7 +57,23 @@ public class ScheduleFragment extends Fragment {
                 eventName=editText_eventName.getText().toString();
                 location = editText_location.getText().toString();
                 detail = editText_detail.getText().toString();
-                checkString(eventName,location,detail);
+
+                if(eventName.isEmpty()){
+                    Toast.makeText(getActivity(), "Event Name is Empty",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(location.isEmpty()){
+                    Toast.makeText(getActivity(), "Location is Empty",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(detail.isEmpty()){
+                    Toast.makeText(getActivity(), "Event Detail is empty ",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //checkString(eventName,location,detail);
                 if(validateDate(editText_time.getText().toString())){
                     time = editText_time.getText().toString();
                 }else{
@@ -74,15 +90,15 @@ public class ScheduleFragment extends Fragment {
                     return;
                 }
 
-                userRef.child("Event").addValueEventListener(new ValueEventListener() {
+                userRef.child("Event").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Event event = new Event(eventName,location,detail,time,limit);
                         long max = snapshot.getChildrenCount();
-
                         userRef.child("Event").child(Long.toString(max)).setValue(event);
+                        Toast.makeText(getActivity(), "Schedule Successfully",
+                                Toast.LENGTH_SHORT).show();
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
@@ -99,25 +115,8 @@ public class ScheduleFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-    private void showToast(String message){
-        if(getContext() == null) {
-            Toast.makeText(getContext(), message + " is empty", Toast.LENGTH_SHORT).show();
-        }
-    }
-    private void checkString(String eventName, String location,String detail){
-        if(eventName == null && eventName.isEmpty()){
-            showToast("Event Name");
-        }
-        if(location == null && location.isEmpty()){
-            showToast("Location");
-        }
-        if(detail == null && detail.isEmpty()){
-            showToast("Event Detail");
-        }
-    }
-
     private boolean validateDate(String time){
-        return time.matches("^\\d{4}/\\d{2}/\\d{2}$");
+        return time.matches("^(?!0000)\\d{4}/(0[1-9]|1[0-2])/(0[1-9]|[12]\\d|3[01])$");
     }
     private boolean validInteger(String limit){
         try{

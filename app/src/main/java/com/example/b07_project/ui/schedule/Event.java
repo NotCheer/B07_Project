@@ -7,8 +7,7 @@ public class Event {
     private int limit;
     public Event(){
     }
-    protected Event(String eventName, String location, String detail, String time,
-                 int limit) {
+    protected Event(String eventName, String location, String detail, String time, int limit) {
         EventName = eventName;
         this.location = location;
         this.detail = detail;
@@ -45,5 +44,13 @@ public class Event {
 
     public void setLimit(int limit) {
         this.limit = limit;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
