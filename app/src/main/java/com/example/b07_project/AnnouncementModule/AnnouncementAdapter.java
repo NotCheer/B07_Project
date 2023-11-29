@@ -3,7 +3,6 @@ package com.example.b07_project.AnnouncementModule;
 import android.app.MediaRouteButton;
 import android.content.Context;
 import android.content.Intent;
-import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,16 +12,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.b07_project.StudentsMain;
 import com.example.b07_project.R;
 import com.example.b07_project.ui.announcement.AnnouncementActivity;
-import com.example.b07_project.ui.announcement.AnnouncementFragment;
 
 import java.util.List;
 public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapter.AnnouncementViewHolder> {
     private List<Announcement> announcementList;
-    private LayoutInflater mInflater;
-
 
     public void setAnnouncements(List<Announcement> announcementList) {
         this.announcementList = announcementList;

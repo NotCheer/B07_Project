@@ -64,6 +64,7 @@ public class AnnouncementFragment extends Fragment {
     }
 
     private void initDataset() {
+        //announcementSet.add(new Announcement("a","b","c"));
         db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb." +
                 "firebaseio.com/");
         announcementRef = db.getReference();
@@ -100,7 +101,8 @@ public class AnnouncementFragment extends Fragment {
     }
 
 
-    /**
+    /** backup code
+     *
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         AnnouncementViewModel announcementViewModel =
