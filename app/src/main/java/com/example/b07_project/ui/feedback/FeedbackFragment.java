@@ -67,6 +67,7 @@ public class FeedbackFragment extends Fragment {
         String comment = commentInput.getText().toString();
         String eventName = event.getText().toString();
         String idx = optionMap.get(eventName);
+        idx="0";
 
         // Create a feedback object. Assuming you have a Feedback class that matches the structure in the database.
         Feedback feedback = new Feedback(comment, (int) rating); // Cast rating to int if your rating is an integer in Firebase
