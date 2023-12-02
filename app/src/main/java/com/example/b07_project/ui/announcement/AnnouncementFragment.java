@@ -5,11 +5,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +18,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.example.b07_project.AnnouncementModule.Announcement;
 import com.example.b07_project.AnnouncementModule.AnnouncementAdapter;
 import com.example.b07_project.R;
-import com.example.b07_project.databinding.FragmentAnnouncementBinding;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -31,8 +28,7 @@ public class AnnouncementFragment extends Fragment {
 
     private List<Announcement> announcementSet;
 
-    private static final String TAG = "RecyclerViewFragment";
-    private static final String KEY_LAYOUT_MANAGER = "layoutManager";
+    private static final String TAG = "AnnouncementRecyclerViewFragment";
     protected RecyclerView mRecyclerView;
     protected AnnouncementAdapter mAdapter;
     protected RecyclerView.LayoutManager mLayoutManager;
@@ -51,7 +47,7 @@ public class AnnouncementFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.recycler_view_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.announcement_recycler_view_fragment, container, false);
         rootView.setTag(TAG);
 
         //init RecyclerView

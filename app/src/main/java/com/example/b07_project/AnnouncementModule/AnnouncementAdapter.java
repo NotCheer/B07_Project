@@ -59,7 +59,7 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
     public AnnouncementViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup,
                                                                          int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.text_row_item, viewGroup, false);
+                .inflate(R.layout.announcement_text_row_item, viewGroup, false);
 
         return new AnnouncementViewHolder(view);
 

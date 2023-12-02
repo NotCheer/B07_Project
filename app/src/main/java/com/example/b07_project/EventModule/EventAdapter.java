@@ -1,26 +1,24 @@
 package com.example.b07_project.EventModule;
 
 
-import android.app.MediaRouteButton;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.b07_project.EventModule.Event;
 import com.example.b07_project.R;
-import com.example.b07_project.EventModule.EventActivity;
 import com.example.b07_project.ui.events.EventActivity;
 
 import java.util.List;
 
-public class EventAdapter extends RecyclerView.Adapter<com.example.b07_project.EventModule.EventAdapter.EventViewHolder> {
+public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
     private List<Event> EventList;
 
     public void setEvents(List<Event> EventList) {
@@ -29,31 +27,39 @@ public class EventAdapter extends RecyclerView.Adapter<com.example.b07_project.E
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
         private final TextView nameTextView;
-        private final TextView detailTextView;
         private final TextView locationTextView;
         private final TextView timeTextView;
+        private final Button button;
         private final Context context;
 
         public EventViewHolder(@NonNull View itemView) {
             super(itemView);
             context = itemView.getContext();
 
-            detailTextView = itemView.findViewById(R.id.lineEventDetail);
             nameTextView = itemView.findViewById(R.id.lineEventName);
             timeTextView = itemView.findViewById(R.id.lineEventTime);
-            locationTextView = itemView.findViewById(R.id.lineEventLocation);
+            locationTextView = itemView.findViewById(R.id.lineEventLocationAndMaxNumber);
+            button = itemView.findViewById(R.id.buttonEvent);
 
         }
 
+        public TextView getNameTextView() {
+            return nameTextView;
+        }
 
-        public TextView getContentTextView() {
-            return contentTextView;
+        public TextView getLocationTextView() {
+            return locationTextView;
         }
-        public TextView getTitleTextView() {
-            return titleTextView;
+
+        public TextView getTimeTextView() {
+            return timeTextView;
         }
-        public TextView getDateTextView() {
-            return dateTextView;
+
+        public Context getContext() {
+            return context;
+        }
+        public Button getButton() {
+            return button;
         }
     }
 
@@ -62,31 +68,33 @@ public class EventAdapter extends RecyclerView.Adapter<com.example.b07_project.E
     }
 
     @Override
-    public com.example.b07_project.EventModule.EventAdapter.EventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup,
-                                                                                                                    int viewType) {
+    public EventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup,
+                                              int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.text_row_item, viewGroup, false);
+                .inflate(R.layout.announcement_text_row_item, viewGroup, false);
 
-        return new com.example.b07_project.Event()Module.EventAdapter.EventViewHolder(view);
+        return new EventViewHolder(view);
 
     }
     private int mExpandedPosition = -1;
     private RecyclerView recyclerView;
     @Override
-    public void onBindViewHolder(@NonNull com.example.b07_project.EventModule.EventAdapter.EventViewHolder holder, final int position) {
-        Event a = EventList.get(position);
-        holder.getTitleTextView().setText(a.getTitle());
-        holder.getContentTextView().setText(a.getContent());
-        holder.getDateTextView().setText(a.getDate());
+    public void onBindViewHolder(@NonNull EventViewHolder holder, final int position) {
+        Event a = EventList.get(holder.getBindingAdapterPosition());
+        holder.getNameTextView().setText(a.getEventName());
+        holder.getTimeTextView().setText(a.getTime());
+        holder.getLocationTextView().setText(String.format("%s(max attendee:%d)", a.getLocation(), a.getLimit()));
 
-        holder.getContentTextView().setOnClickListener(new View.OnClickListener() {
-            TextView itemView = holder.getContentTextView();
+
+        holder.getButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(itemView.getContext(), EventActivity.class);
-                Log.d("Events","clicked"+Integer.toString(holder.getBindingAdapterPosition()));
-                intent.putExtra("content", EventList.get(holder.getBindingAdapterPosition()).getContent());
-                itemView.getContext().startActivity(intent);
+                int p = holder.getBindingAdapterPosition();
+                Intent intent = new Intent(holder.getContext(), EventActivity.class);
+                Event eventInfo = EventList.get(p);
+                Log.d("Events","clicked"+Integer.toString(p));
+                intent.putExtra("eventInfo", eventInfo);
+                holder.getContext().startActivity(intent);
             }
         });
     }

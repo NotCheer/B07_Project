@@ -1,9 +1,10 @@
 package com.example.b07_project.EventModule;
 
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Event {
+public class Event implements Serializable {
     private String eventName;
     private String detail;
     private String location;

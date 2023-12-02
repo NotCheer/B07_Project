@@ -17,4 +17,5 @@
     <string name="view">ViewEvents</string>
     <string name="schedule">Schedule</string>
     <string name="complaint">Complaints</string>
+    <string name="detail">detail</string>
 </resources>
