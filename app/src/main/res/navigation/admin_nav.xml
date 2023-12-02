@@ -9,7 +9,7 @@
         android:id="@+id/navigation_post"
         android:name="com.example.b07_project.ui.post.PostFragment"
         android:label="@string/post"
-        tools:layout="@layout/fragment_post"/>
+        tools:layout="@layout/fragment_postann"/>
 
     <fragment
         android:id="@+id/navigation_view"
@@ -28,6 +28,12 @@
         android:id="@+id/navigation_complaints"
         android:name="com.example.b07_project.ui.complaints.ComplaintsFragment"
         tools:layout="@layout/fragment_complaints"/>
+
+    <fragment
+        android:id="@+id/navigation_logout"
+        android:name="com.example.b07_project.ui.logout.LogoutFragment"
+        android:label="@string/logout"
+        tools:layout="@layout/fragment_logout"/>
 
 
 </navigation>

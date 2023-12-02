@@ -58,7 +58,6 @@ public class Login extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 userRef.child("users").child(name).addListenerForSingleValueEvent
                         (new ValueEventListener() {
                             @Override
@@ -68,10 +67,18 @@ public class Login extends AppCompatActivity {
                                             getValue(String.class);
                                     String passwords = snapshot.child("password").
                                             getValue(String.class);
+                                    String identity = snapshot.child("identity").
+                                            getValue(String.class);
                                     if((emails.equals(email) && passwords.equals(password))) {
-                                        Intent intent = new Intent(Login.this,
-                                                AdminMain.class);
-                                        startActivity(intent);
+                                        if(identity.equals("Admin")){
+                                            Intent intent = new Intent(Login.this,
+                                                    AdminMain.class);
+                                            startActivity(intent);
+                                        } else if (identity.equals("Student")) {
+                                            Intent intent = new Intent(Login.this,
+                                                    StudentsMain.class);
+                                            startActivity(intent);
+                                        }
                                     }else{
                                         Toast.makeText(Login.this,
                                                 "Email or Password Wrong",

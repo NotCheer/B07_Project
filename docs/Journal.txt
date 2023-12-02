@@ -1,25 +1,67 @@
-[time] Nov.28
+[time] Nov.29
+Lianhao
+  - starting refactor the login, and write test
 
+------------------------------------
+[time] Nov.28
+Changze
+  - make admin switch fragments
+Xinyu
+  - Finished integrating announcement
+Lianhao
+  - Finish the Admin Schedule Event story
 ----------------------------------------
 [time] Nov.27
 Delun
   - Finished Backend of PostCheck
+Changze
+  - Finish admin UI interface
+Xinyu
+  - Finished Integrating firebase
+Lianhao
+  - Debugging the Schedule Event
 ----------------------------------------
 [time] Nov.26
 Delun
   - Finished UI page of PostCheck
+Xinyu
+  - debugging
+Lianhao
+  - do lab 5
 ----------------------------------------
 [time] Nov.25
-
+Changze
+  - Finish students UI interface
+  - make switch students fragments
+Xinyu
+  - debuging
+Lianhao
+  -Fix the Admin Schedule Event
 ----------------------------------------
 [time] Nov.24
-
+Changze
+  - Finish initial AnnoucementFragment.java
+  - Finish initial CheckPostFragment.java
+Xinyu
+  - Starting integrating announcement
+Lianhao
+  - Half way of doing Admin Schedule Event, create object event, consider useing realtimedatabase to store info of events
 ----------------------------------------
 [time] Nov.23
 Delun
   - Choose to use selection bar for options to students.
+Changze
+  - review STAB52
+Lianhao
+  - review STAB52
 ----------------------------------------
 [time] Nov.22
+[TODO]
+Changze
+  - Create students four function's fragments
+  - Create admin four function's fragments
+Lianhao
+  - Create the UI of Schedule Event
 
 ----------------------------------------
 [time] Nov.21

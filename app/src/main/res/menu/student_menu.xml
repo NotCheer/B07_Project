@@ -21,6 +21,11 @@
         android:icon="@drawable/check"
         android:title="@string/title_Check" />
 
+    <item
+        android:icon="@drawable/logout"
+        android:title="@string/logout"
+        android:id="@+id/navigation_logout"/>
+
 
 
 </menu>

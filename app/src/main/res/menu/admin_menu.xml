@@ -21,4 +21,10 @@
         android:title="@string/complaint"
         android:id="@+id/navigation_complaints"/>
 
+    <item
+        android:icon="@drawable/logout"
+        android:title="@string/logout"
+        android:id="@+id/navigation_logout"/>
+
+
 </menu>

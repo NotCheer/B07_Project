@@ -49,7 +49,6 @@ public class AnnouncementFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.announcement_recycler_view_fragment, container, false);
         rootView.setTag(TAG);
-
         //init RecyclerView
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -68,15 +67,16 @@ public class AnnouncementFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<Announcement> announcementList = new ArrayList<Announcement>();
-                int index = 0;
+                long index = 0;
                 long max = dataSnapshot.getChildrenCount();
+                index = max - 1;
 
                 Log.d("retriever", "retrieving");
 
-                while (index < max) {
+                while (index>=0) {
                     // Get the values from the dataSnapshot and create an Announcement object
                     Log.d("retriever", "looping");
-                    String ID = Integer.toString(index);
+                    String ID = Long.toString(index);
                     String title = dataSnapshot.child(ID).child("title").getValue(String.class);
                     String content = dataSnapshot.child(ID).child("content").getValue(String.class);
                     String date = dataSnapshot.child(ID).child("date").getValue(String.class);
@@ -84,7 +84,7 @@ public class AnnouncementFragment extends Fragment {
                     Announcement announcement = new Announcement(title, content, date);
                     Log.d("retriever", "have: "+announcement.getContent());
                     announcementList.add(announcement);
-                    index++;
+                    index--;
                 }
                 setAnnouncementSet(announcementList);
 
