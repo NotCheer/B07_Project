@@ -48,6 +48,14 @@ public class ViewFragment extends Fragment {
         this.Set = view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mAdapter.notifyDataSetChanged();
+        mAdapter = new ViewAdapter(Set);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.recycler_view_fragment, container, false);

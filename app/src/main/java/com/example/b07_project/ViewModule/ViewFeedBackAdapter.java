@@ -28,6 +28,7 @@ public class ViewFeedBackAdapter extends RecyclerView.Adapter<com.example.b07_pr
 
     public static class FeedbackViewHolder extends RecyclerView.ViewHolder {
         private final TextView FeedbackTextView;
+        private final TextView feedbackRate;
 
 
         public MediaRouteButton details;
@@ -38,11 +39,15 @@ public class ViewFeedBackAdapter extends RecyclerView.Adapter<com.example.b07_pr
             context = itemView.getContext();
 
             FeedbackTextView = itemView.findViewById(R.id.lineFeedBack);
+            feedbackRate = itemView.findViewById(R.id.lineScore);
         }
 
 
         public TextView getFeedbackTextView() {
             return FeedbackTextView;
+        }
+        public TextView getFeedbackScore() {
+            return feedbackRate;
         }
 
     }
@@ -68,6 +73,7 @@ public class ViewFeedBackAdapter extends RecyclerView.Adapter<com.example.b07_pr
     public void onBindViewHolder(@NonNull com.example.b07_project.ViewModule.ViewFeedBackAdapter.FeedbackViewHolder holder, final int position) {
         Feedback a = FeedbackList.get(position);
         holder.getFeedbackTextView().setText(a.getComment());
+        holder.getFeedbackScore().setText(Double.toString(a.getRate()));
 
     }
 

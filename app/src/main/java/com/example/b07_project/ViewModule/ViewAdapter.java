@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,8 @@ public class ViewAdapter extends RecyclerView.Adapter<com.example.b07_project.Vi
         private final TextView NameTextView;
         private final TextView dateTextView;
 
+        Button btn;
+
 
         public MediaRouteButton details;
         private final Context context;
@@ -41,6 +44,7 @@ public class ViewAdapter extends RecyclerView.Adapter<com.example.b07_project.Vi
             DetailTextView = itemView.findViewById(R.id.EventDetail);
             NameTextView = itemView.findViewById(R.id.lineEventName);
             dateTextView = itemView.findViewById(R.id.lineEventDate);
+            btn = itemView.findViewById(R.id.enter_button);
         }
 
 
@@ -55,6 +59,8 @@ public class ViewAdapter extends RecyclerView.Adapter<com.example.b07_project.Vi
         public TextView getDateTextView() {
             return dateTextView;
         }
+
+        public Button getButton(){return btn;}
 
     }
 
@@ -83,7 +89,7 @@ public class ViewAdapter extends RecyclerView.Adapter<com.example.b07_project.Vi
         holder.getDateTextView().setText(a.getTime());
 
 
-        holder.getDetailTextView().setOnClickListener(new View.OnClickListener() {
+        holder.getButton().setOnClickListener(new View.OnClickListener() {
             TextView itemView = holder.getDetailTextView();
 
             @Override
