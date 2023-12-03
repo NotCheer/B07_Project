@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">B07_Project</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="register">Sign up</string>
     <string name="email">Email:</string>
     <string name="password">Password:</string>
