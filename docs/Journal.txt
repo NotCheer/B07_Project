@@ -1,6 +1,36 @@
+[time] Dec.3
+Changze
+  - Finishing admin view event activity recycle view, which can view the event detail
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning runner && handler
+    - solve problem by using runner && handler
+
+------------------------------------
+[time] Dec.2
+Changze
+  - Finishing admin view event recycle view
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning Override onResume
+    - solve problem by using onResume
+
+------------------------------------
+[time] Dec.1
+Changze
+  - Finishing admin view event frame
+
+------------------------------------
+[time] Nov.30
+Changze
+  - Finish all frame
+
+------------------------------------
 [time] Nov.29
 Lianhao
   - starting refactor the login, and write test
+Changze
+  - learning MVP
 
 ------------------------------------
 [time] Nov.28
