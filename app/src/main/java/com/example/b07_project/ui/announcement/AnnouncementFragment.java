@@ -38,7 +38,7 @@ public class AnnouncementFragment extends Fragment {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initDataset();
+
     }
 
     public void setAnnouncementSet (List<Announcement> ann) {
@@ -53,6 +53,7 @@ public class AnnouncementFragment extends Fragment {
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
+        initDataset();
         mAdapter = new AnnouncementAdapter(announcementSet);
         mRecyclerView.setAdapter(mAdapter);
         return rootView;
@@ -91,7 +92,7 @@ public class AnnouncementFragment extends Fragment {
             }
 
             public void onCancelled(DatabaseError databaseError) {
-                // Handle the error case, if any
+                // no effect here
             }
         });
     }

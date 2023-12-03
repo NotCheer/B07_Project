@@ -25,6 +25,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         this.EventList = EventList;
     }
 
+    public List<Event> getEventList() {
+        return EventList;
+    }
+
     public static class EventViewHolder extends RecyclerView.ViewHolder {
         private final TextView nameTextView;
         private final TextView locationTextView;
@@ -67,11 +71,13 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         this.EventList = EventList;
     }
 
+
+
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup,
                                               int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.announcement_text_row_item, viewGroup, false);
+                .inflate(R.layout.student_events_text_row_item, viewGroup, false);
 
         return new EventViewHolder(view);
 
@@ -80,10 +86,13 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     private RecyclerView recyclerView;
     @Override
     public void onBindViewHolder(@NonNull EventViewHolder holder, final int position) {
+        Log.d("eventAdapter","creating View");
         Event a = EventList.get(holder.getBindingAdapterPosition());
+        if(a==null) Log.d("adapter","empty event at eventAdapter");
         holder.getNameTextView().setText(a.getEventName());
         holder.getTimeTextView().setText(a.getTime());
         holder.getLocationTextView().setText(String.format("%s(max attendee:%d)", a.getLocation(), a.getLimit()));
+
 
 
         holder.getButton().setOnClickListener(new View.OnClickListener() {
