@@ -15,10 +15,16 @@ Changze
     - learning Override onResume
     - solve problem by using onResume
 
+Delun
+  - Finished on submitting feedbacks
+
 ------------------------------------
 [time] Dec.1
 Changze
   - Finishing admin view event frame
+
+Delun
+  -almost done with events' feedback
 
 ------------------------------------
 [time] Nov.30
