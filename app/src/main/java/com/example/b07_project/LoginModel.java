@@ -7,8 +7,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LoginModel {
     FirebaseDatabase db;
+    List<User> userList;
     public LoginModel(){
         db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb." +
                 "firebaseio.com/");
@@ -29,7 +33,7 @@ public class LoginModel {
                     presenter.Toast("Email or Password or Name Wrong");
                 }
 //                Iterable<DataSnapshot> children = snapshot.getChildren();
-//                List<User> userList = new ArrayList<>();
+//                userList = new ArrayList<>();
 //                for(DataSnapshot child:children){
 //                    User user = child.getValue(User.class);
 //                    if(user != null){

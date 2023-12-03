@@ -8,7 +8,10 @@ public class LoginPresenter {
         this.view = view;
     }
 
-    public void checkDB(String name, String email, String password){
+    public void checkDB(){
+        String name = view.getUsername();
+        String email = view.getUserEmail();
+        String password = view.getUserPassword();
         if(name.isEmpty()){
             Toast("Enter Name");
         } else if (email.isEmpty()) {
