@@ -5,6 +5,9 @@ Changze
     - Solved the problem that the adapter is generated in the view after refreshing
     - learning runner && handler
     - solve problem by using runner && handler
+Xinyu
+  - Introduce handler to resolve firebase latency issue
+  - reloved mokito not running issue (match jdk with newer mokito runnner)
 
 ------------------------------------
 [time] Dec.2
@@ -18,6 +21,12 @@ Changze
 Delun
   - Finished on submitting feedbacks
 
+Xinyu
+  - Get UserName.java set up to store user
+    name across activities
+  - Helping other with recyclerView
+  - Resolving merge conflicts
+
 ------------------------------------
 [time] Dec.1
 Changze
@@ -26,10 +35,15 @@ Changze
 Delun
   -almost done with events' feedback
 
+Xinyu
+  - Finish RecyclerView
+
 ------------------------------------
 [time] Nov.30
 Changze
   - Finish all frame
+Xinyu
+  - resting
 
 ------------------------------------
 [time] Nov.29
@@ -37,6 +51,8 @@ Lianhao
   - starting refactor the login, and write test
 Changze
   - learning MVP
+Xinyu
+  - getting Event mudule set up
 
 ------------------------------------
 [time] Nov.28
