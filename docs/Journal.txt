@@ -2,6 +2,9 @@
 Lianhao
   - Finish the Mockito Test for LoginPresenter, coverage 100%
 
+Delun
+  - Megere my branch to the main branch
+
 [time] Dec.3
 Changze
   - Finishing admin view event activity recycle view, which can view the event detail
