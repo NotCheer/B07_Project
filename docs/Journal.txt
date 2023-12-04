@@ -1,3 +1,7 @@
+[time] Dec.4
+Lianhao
+  - Finish the Mockito Test for LoginPresenter, coverage 100%
+
 [time] Dec.3
 Changze
   - Finishing admin view event activity recycle view, which can view the event detail
@@ -8,6 +12,9 @@ Changze
 Xinyu
   - Introduce handler to resolve firebase latency issue
   - reloved mokito not running issue (match jdk with newer mokito runnner)
+Lianhao
+  - Complete LoginModel, LoginView, LoginPresenter
+  - Working with writing Mockito Test for the LoginPresenter
 
 ------------------------------------
 [time] Dec.2
@@ -26,6 +33,9 @@ Xinyu
     name across activities
   - Helping other with recyclerView
   - Resolving merge conflicts
+Lianhao
+  - Meet some problem of the functionality of LoginPresenter
+  - Fix the problem of LoginPresenter
 
 ------------------------------------
 [time] Dec.1
@@ -37,6 +47,8 @@ Delun
 
 Xinyu
   - Finish RecyclerView
+Lianhao
+  - Have a structure of LoginModel, LoginView, LoginPresenter
 
 ------------------------------------
 [time] Nov.30
@@ -44,6 +56,8 @@ Changze
   - Finish all frame
 Xinyu
   - resting
+Lianhao
+  - Review the MVP and try refactor the Login into three part
 
 ------------------------------------
 [time] Nov.29
