@@ -1,11 +1,17 @@
 package com.example.b07_project;
 
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
-
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.ValueEventListener;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,11 +25,11 @@ import org.mockito.junit.MockitoJUnitRunner;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
 @RunWith(MockitoJUnitRunner.class)
 public class ExampleUnitTest {
     @Mock
     LoginModel model;
-
     @Mock
     LoginView view;
 
@@ -55,34 +61,91 @@ public class ExampleUnitTest {
         verify(view).ToastMsg("Enter Password");
     }
     @Test
-    public void checkDB_Student(){
-        when(view.getUsername()).thenReturn("1");
-        when(view.getUserEmail()).thenReturn("1");
-        when(view.getUserPassword()).thenReturn("1");
+    public void testQueryDB_Student() {
+        // Setup
+        String name = "1";
+        String email = "1";
+        String password = "1";
+        String identity = "Student";
+        when(view.getUsername()).thenReturn(name);
+        when(view.getUserEmail()).thenReturn(email);
+        when(view.getUserPassword()).thenReturn(password);
+
+//        doAnswer(invocation -> {
+//            ValueEventListener valueEventListener = invocation.getArgument(0);
+//            DataSnapshot mockSnapshot = mock(DataSnapshot.class);
+//            when(mockSnapshot.child("email").getValue(String.class)).thenReturn(email);
+//            when(mockSnapshot.child("password").getValue(String.class)).thenReturn(password);
+//            when(mockSnapshot.child("identity").getValue(String.class)).thenReturn(identity);
+//            when(mockSnapshot.exists()).thenReturn(true);
+//            valueEventListener.onDataChange(mockSnapshot);
+//            return null;
+//        }).when(model).queryDB(name, email, password, new LoginPresenter(model,view));
+
         LoginPresenter presenter = new LoginPresenter(model,view);
         presenter.checkDB();
-        verify(model).queryDB("1","1","1",view);
+
+        verify(model).queryDB("1", "1", "1", presenter);
+        presenter.indicateJump("Student");
+        verify(view).jump("Student");
     }
+
     @Test
-    public void checkDB_Admin(){
-        when(view.getUsername()).thenReturn("2");
-        when(view.getUserEmail()).thenReturn("2");
-        when(view.getUserPassword()).thenReturn("2");
+    public void testQueryDB_Admin() {
+        // Setup
+
+        String name = "2";
+        String email = "2";
+        String password = "2";
+        String identity = "Admin";
+        when(view.getUsername()).thenReturn(name);
+        when(view.getUserEmail()).thenReturn(email);
+        when(view.getUserPassword()).thenReturn(password);
+
+//        doAnswer(invocation -> {
+//            ValueEventListener valueEventListener = invocation.getArgument(0);
+//            DataSnapshot mockSnapshot = mock(DataSnapshot.class);
+//            when(mockSnapshot.child("email").getValue(String.class)).thenReturn(email);
+//            when(mockSnapshot.child("password").getValue(String.class)).thenReturn(password);
+//            when(mockSnapshot.child("identity").getValue(String.class)).thenReturn(identity);
+//            when(mockSnapshot.exists()).thenReturn(true);
+//            valueEventListener.onDataChange(mockSnapshot);
+//            return null;
+//        }).when(model).queryDB(name, email, password, new LoginPresenter(model,view));
+
         LoginPresenter presenter = new LoginPresenter(model,view);
         presenter.checkDB();
-        verify(model).queryDB("2","2","2",view);
+
+        verify(model).queryDB("2", "2", "2", presenter);
+        presenter.indicateJump("Admin");
+        verify(view).jump("Admin");
     }
 
     @Test
-    public void checkDB_Unsuccessful(){
-        when(view.getUsername()).thenReturn("2");
-        when(view.getUserEmail()).thenReturn("2");
-        when(view.getUserPassword()).thenReturn("66659215");
+    public void testQueryDB_unSuccess() {
+        // Setup
+
+        String name = "123";
+        String email = "155";
+        String password = "144";
+        String identity = "";
+        when(view.getUsername()).thenReturn(name);
+        when(view.getUserEmail()).thenReturn(email);
+        when(view.getUserPassword()).thenReturn(password);
+
+//        doAnswer(invocation -> {
+//            ValueEventListener valueEventListener = invocation.getArgument(0);
+//            DataSnapshot mockSnapshot = mock(DataSnapshot.class);
+//            when(mockSnapshot.exists()).thenReturn(false);
+//            valueEventListener.onDataChange(mockSnapshot);
+//            return null;
+//        }).when(model).queryDB(name, email, password, new LoginPresenter(model,view));
+
         LoginPresenter presenter = new LoginPresenter(model,view);
         presenter.checkDB();
-        verify(model).queryDB("2","2","66659215",view);
+
+        verify(model).queryDB("123", "155", "144", presenter);
+        presenter.Toast("Email or Password or Name Wrong");
+        verify(view).ToastMsg("Email or Password or Name Wrong");
     }
-
-
-
 }

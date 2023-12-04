@@ -18,12 +18,16 @@ public class LoginPresenter {
             Toast("Enter Email");
         } else if (password.isEmpty()) {
             Toast("Enter Password");
-        }else{
-            model.queryDB(name,email,password,view);
+        }else {
+            model.queryDB(name, email, password, this);
         }
     }
 
     public void Toast(String msg) {
         view.ToastMsg(msg);
+    }
+
+    public void indicateJump(String identity) {
+        view.jump(identity);
     }
 }

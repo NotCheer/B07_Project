@@ -11,14 +11,12 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginModel {
     FirebaseDatabase db;
-    boolean isFound = false;
-    public String identity;
     public LoginModel(){
         db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb." +
                 "firebaseio.com/");
     }
 
-    public void queryDB(String name, String email, String password, LoginView view){
+    public void queryDB(String name, String email, String password, LoginPresenter presenter){
         DatabaseReference userRef = db.getReference();
         DatabaseReference query = userRef.child("users").child(name);
 
@@ -28,9 +26,9 @@ public class LoginModel {
                    if(email.equals(snapshot.child("email").getValue(String.class))
                            && password.equals(snapshot.child("password")
                            .getValue(String.class)) && snapshot.exists()){
-                    view.jump(snapshot.child("identity").getValue(String.class));
+                    presenter.indicateJump(snapshot.child("identity").getValue(String.class));
                    }else {
-                       view.ToastMsg("Email or Password or Name Wrong");
+                       presenter.Toast("Email or Password or Name Wrong");
                    }
                }
             @Override
@@ -39,3 +37,4 @@ public class LoginModel {
         });
     }
 }
+
