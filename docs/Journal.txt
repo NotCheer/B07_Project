@@ -5,6 +5,9 @@ Lianhao
 Delun
   - Megere my branch to the main branch
 
+Changze
+  - Merge the final projects
+
 [time] Dec.3
 Changze
   - Finishing admin view event activity recycle view, which can view the event detail
