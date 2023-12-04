@@ -24,6 +24,8 @@ public class Login extends AppCompatActivity {
     Button btn_login,btn_signup;
     FirebaseDatabase db;
 
+    UserName userName = UserName.getInstance();
+
     DatabaseReference userRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,8 @@ public class Login extends AppCompatActivity {
                                         } else if (identity.equals("Student")) {
                                             Intent intent = new Intent(Login.this,
                                                     StudentsMain.class);
+                                            intent.putExtra("loginName",name);
+                                            userName.setName(name);
                                             startActivity(intent);
                                         }
                                     }else{

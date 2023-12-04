@@ -21,7 +21,7 @@ public class AnnouncementActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_student_event_display);
+        setContentView(R.layout.activity_announcement_display);
         btn = findViewById(R.id.back_bottom);
         text = findViewById(R.id.detail_content);
         Intent intent = getIntent();
@@ -30,8 +30,7 @@ public class AnnouncementActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnnouncementActivity.this, StudentsMain.class);
-                startActivity(intent);
+                finish();
             }
         });
 

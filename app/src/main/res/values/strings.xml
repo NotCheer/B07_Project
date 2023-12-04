@@ -46,4 +46,5 @@
         <!-- more items as needed -->
     </string-array>
     <string name="detail">detail</string>
+    <string name="rsvp">RSVP</string>
 </resources>

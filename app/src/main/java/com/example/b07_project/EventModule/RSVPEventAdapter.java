@@ -18,7 +18,7 @@ import com.example.b07_project.ui.events.StudentEventActivity;
 
 import java.util.List;
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
+public class RSVPEventAdapter extends RecyclerView.Adapter<RSVPEventAdapter.EventViewHolder> {
     private List<Event> EventList;
 
     public void setEvents(List<Event> EventList) {
@@ -67,7 +67,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         }
     }
 
-    public EventAdapter(List<Event> EventList) {
+    public RSVPEventAdapter(List<Event> EventList) {
         this.EventList = EventList;
     }
 
@@ -100,7 +100,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
             public void onClick(View v) {
                 int p = holder.getBindingAdapterPosition();
                 Intent intent = new Intent(holder.getContext(), StudentEventActivity.class);
-                String eventInfo = EventList.get(p).getDetail();
+                Event eventInfo = EventList.get(p);
                 String id = Integer.toString(EventList.size()-p-1);
                 Log.d("Events","clicked"+Integer.toString(p));
                 intent.putExtra("eventInfo", eventInfo);
