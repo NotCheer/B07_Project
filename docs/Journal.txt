@@ -1,6 +1,72 @@
+[time] Dec.4
+Lianhao
+  - Finish the Mockito Test for LoginPresenter, coverage 100%
+
+[time] Dec.3
+Changze
+  - Finishing admin view event activity recycle view, which can view the event detail
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning runner && handler
+    - solve problem by using runner && handler
+Xinyu
+  - Introduce handler to resolve firebase latency issue
+  - reloved mokito not running issue (match jdk with newer mokito runnner)
+Lianhao
+  - Complete LoginModel, LoginView, LoginPresenter
+  - Working with writing Mockito Test for the LoginPresenter
+
+------------------------------------
+[time] Dec.2
+Changze
+  - Finishing admin view event recycle view
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning Override onResume
+    - solve problem by using onResume
+
+Delun
+  - Finished on submitting feedbacks
+
+Xinyu
+  - Get UserName.java set up to store user
+    name across activities
+  - Helping other with recyclerView
+  - Resolving merge conflicts
+Lianhao
+  - Meet some problem of the functionality of LoginPresenter
+  - Fix the problem of LoginPresenter
+
+------------------------------------
+[time] Dec.1
+Changze
+  - Finishing admin view event frame
+
+Delun
+  -almost done with events' feedback
+
+Xinyu
+  - Finish RecyclerView
+Lianhao
+  - Have a structure of LoginModel, LoginView, LoginPresenter
+
+------------------------------------
+[time] Nov.30
+Changze
+  - Finish all frame
+Xinyu
+  - resting
+Lianhao
+  - Review the MVP and try refactor the Login into three part
+
+------------------------------------
 [time] Nov.29
 Lianhao
   - starting refactor the login, and write test
+Changze
+  - learning MVP
+Xinyu
+  - getting Event mudule set up
 
 ------------------------------------
 [time] Nov.28
