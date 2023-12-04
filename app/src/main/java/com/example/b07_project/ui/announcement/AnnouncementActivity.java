@@ -7,17 +7,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.b07_project.AnnouncementModule.Announcement;
 import com.example.b07_project.AnnouncementModule.AnnouncementAdapter;
 import com.example.b07_project.StudentsMain;
 import com.example.b07_project.R;
-
-import java.util.ArrayList;
-import java.util.Date;
 
 public class AnnouncementActivity extends AppCompatActivity {
 
@@ -37,8 +30,7 @@ public class AnnouncementActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnnouncementActivity.this, StudentsMain.class);
-                startActivity(intent);
+                finish();
             }
         });
 
