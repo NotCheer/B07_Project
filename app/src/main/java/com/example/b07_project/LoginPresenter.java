@@ -19,17 +19,10 @@ public class LoginPresenter {
         } else if (password.isEmpty()) {
             Toast("Enter Password");
         }else{
-            model.queryDB(name,email,password,this);
+            model.queryDB(name,email,password,view);
         }
     }
 
-    public void userCorrect(String identity){
-        if(identity.equals("Admin")) {
-            view.jumpAdmin();
-        }else{
-            view.jumpStudent();
-        }
-    }
     public void Toast(String msg) {
         view.ToastMsg(msg);
     }

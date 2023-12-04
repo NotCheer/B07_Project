@@ -51,14 +51,15 @@ public class LoginView extends AppCompatActivity{
         return password;
     }
 
-    public void jumpAdmin(){
-        Intent intent = new Intent(LoginView.this,
-                AdminMain.class);
-        startActivity(intent);
-    }
-    public void jumpStudent(){
-        Intent intent = new Intent(LoginView.this,
-                StudentsMain.class);
+    public void jump(String target){
+        Intent intent;
+        if(target.equals("Admin")){
+            intent = new Intent(LoginView.this,
+                    AdminMain.class);
+        }else{
+            intent = new Intent(LoginView.this,
+                    StudentsMain.class);
+        }
         startActivity(intent);
     }
 
