@@ -1,22 +1,17 @@
 package com.example.b07_project;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
+
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
-import android.content.Intent;
+
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
+
 import org.mockito.Mock;
-//import org.mockito.runners.MockitoJUnitRunner;
+
 import org.mockito.junit.MockitoJUnitRunner;
 
 /**
