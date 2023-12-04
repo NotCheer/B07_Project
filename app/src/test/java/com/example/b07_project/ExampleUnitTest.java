@@ -1,17 +1,8 @@
 package com.example.b07_project;
 
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.ValueEventListener;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -71,17 +62,6 @@ public class ExampleUnitTest {
         when(view.getUserEmail()).thenReturn(email);
         when(view.getUserPassword()).thenReturn(password);
 
-//        doAnswer(invocation -> {
-//            ValueEventListener valueEventListener = invocation.getArgument(0);
-//            DataSnapshot mockSnapshot = mock(DataSnapshot.class);
-//            when(mockSnapshot.child("email").getValue(String.class)).thenReturn(email);
-//            when(mockSnapshot.child("password").getValue(String.class)).thenReturn(password);
-//            when(mockSnapshot.child("identity").getValue(String.class)).thenReturn(identity);
-//            when(mockSnapshot.exists()).thenReturn(true);
-//            valueEventListener.onDataChange(mockSnapshot);
-//            return null;
-//        }).when(model).queryDB(name, email, password, new LoginPresenter(model,view));
-
         LoginPresenter presenter = new LoginPresenter(model,view);
         presenter.checkDB();
 
@@ -102,17 +82,6 @@ public class ExampleUnitTest {
         when(view.getUserEmail()).thenReturn(email);
         when(view.getUserPassword()).thenReturn(password);
 
-//        doAnswer(invocation -> {
-//            ValueEventListener valueEventListener = invocation.getArgument(0);
-//            DataSnapshot mockSnapshot = mock(DataSnapshot.class);
-//            when(mockSnapshot.child("email").getValue(String.class)).thenReturn(email);
-//            when(mockSnapshot.child("password").getValue(String.class)).thenReturn(password);
-//            when(mockSnapshot.child("identity").getValue(String.class)).thenReturn(identity);
-//            when(mockSnapshot.exists()).thenReturn(true);
-//            valueEventListener.onDataChange(mockSnapshot);
-//            return null;
-//        }).when(model).queryDB(name, email, password, new LoginPresenter(model,view));
-
         LoginPresenter presenter = new LoginPresenter(model,view);
         presenter.checkDB();
 
@@ -132,14 +101,6 @@ public class ExampleUnitTest {
         when(view.getUsername()).thenReturn(name);
         when(view.getUserEmail()).thenReturn(email);
         when(view.getUserPassword()).thenReturn(password);
-
-//        doAnswer(invocation -> {
-//            ValueEventListener valueEventListener = invocation.getArgument(0);
-//            DataSnapshot mockSnapshot = mock(DataSnapshot.class);
-//            when(mockSnapshot.exists()).thenReturn(false);
-//            valueEventListener.onDataChange(mockSnapshot);
-//            return null;
-//        }).when(model).queryDB(name, email, password, new LoginPresenter(model,view));
 
         LoginPresenter presenter = new LoginPresenter(model,view);
         presenter.checkDB();
