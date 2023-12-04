@@ -28,11 +28,11 @@ public class ComplaintsFragment extends Fragment {
     ScrollView ComplaintView;
     LinearLayout linearLayout;
     TextView textView;
-    Drawable drawable;
+    Drawable drawable = getResources().getDrawable(R.drawable.text_box);
     FirebaseDatabase db;
     DatabaseReference userRef;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("UseCompatLoadingForDrawables")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -40,11 +40,10 @@ public class ComplaintsFragment extends Fragment {
         ComplaintView = view.findViewById(R.id.ComplaintView);
         linearLayout = view.findViewById(R.id.displayComplaints);
         textView = view.findViewById(R.id.noComplaints);
-        drawable = getResources().getDrawable(R.drawable.text_box);
 
         LinearLayout.LayoutParams params= new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params. setMargins(10,30,10,0);
+        params. setMargins(10,0,10,20);
 
         db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb.firebaseio.com/");
         userRef = db.getReference().child("Complaints");
@@ -59,7 +58,7 @@ public class ComplaintsFragment extends Fragment {
                 textview.setText(complaint);
                 textview.setTextSize(22);
                 textview.setBackground(drawable);
-                textview.setPaddingRelative(20,10,10,50);
+                textview.setPaddingRelative(20,10,20,50);
                 textview.setLayoutParams(params);
                 linearLayout.setGravity(Gravity.NO_GRAVITY);
                 linearLayout.addView(textview);
