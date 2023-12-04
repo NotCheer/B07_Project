@@ -70,6 +70,7 @@ public class RSVPEventAdapter extends RecyclerView.Adapter<RSVPEventAdapter.Even
     public RSVPEventAdapter(List<Event> EventList) {
         this.EventList = EventList;
     }
+    public RSVPEventAdapter() {};
 
 
 

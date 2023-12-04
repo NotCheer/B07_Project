@@ -52,8 +52,9 @@ public class ScheduleFragment extends Fragment {
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String eventName,location,time,detail,limiter;
+                String eventName,location,time,detail,limiter, id;
                 int limit;
+                id = "1";
                 eventName=editText_eventName.getText().toString();
                 location = editText_location.getText().toString();
                 detail = editText_detail.getText().toString();
@@ -93,7 +94,7 @@ public class ScheduleFragment extends Fragment {
                 userRef.child("Event").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        Event event = new Event(eventName,location,detail,time,limit);
+                        Event event = new Event(eventName,location,detail,time,limit,id);
                         long max = snapshot.getChildrenCount();
                         userRef.child("Event").child(Long.toString(max)).setValue(event);
                         Toast.makeText(getActivity(), "Schedule Successfully",

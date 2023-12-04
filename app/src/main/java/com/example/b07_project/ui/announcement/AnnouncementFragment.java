@@ -86,9 +86,13 @@ public class AnnouncementFragment extends Fragment {
                     // Get the values from the dataSnapshot and create an Announcement object
                     Log.d("retriever", "looping");
                     String ID = Long.toString(index);
+                    Log.d("id", "retrieving");
                     String title = dataSnapshot.child(ID).child("title").getValue(String.class);
+                    Log.d("title", "retrieving");
                     String content = dataSnapshot.child(ID).child("content").getValue(String.class);
+                    Log.d("content", "retrieving");
                     String date = dataSnapshot.child(ID).child("date").getValue(String.class);
+                    Log.d("data", "retrieving");
 
                     Announcement announcement = new Announcement(title, content, date);
                     Log.d("retriever", "have: "+announcement.getContent());

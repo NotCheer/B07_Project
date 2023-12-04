@@ -1,6 +1,90 @@
+[time] Dec.4
+Lianhao
+  - Finish the Mockito Test for LoginPresenter, coverage 100%
+
+Delun
+  - Megere my branch to the main branch
+
+Changze
+  - Merge the final projects
+
+Andy
+  - Merge to main
+  - changing style
+
+[time] Dec.3
+Changze
+  - Finishing admin view event activity recycle view, which can view the event detail
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning runner && handler
+    - solve problem by using runner && handler
+Xinyu
+  - Introduce handler to resolve firebase latency issue
+  - reloved mokito not running issue (match jdk with newer mokito runnner)
+Lianhao
+  - Complete LoginModel, LoginView, LoginPresenter
+  - Working with writing Mockito Test for the LoginPresenter
+Andy
+  - Finish view complaints activity
+  - debug
+
+------------------------------------
+[time] Dec.2
+Changze
+  - Finishing admin view event recycle view
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning Override onResume
+    - solve problem by using onResume
+
+Delun
+  - Finished on submitting feedbacks
+
+Xinyu
+  - Get UserName.java set up to store user
+    name across activities
+  - Helping other with recyclerView
+  - Resolving merge conflicts
+Lianhao
+  - Meet some problem of the functionality of LoginPresenter
+  - Fix the problem of LoginPresenter
+Andy
+  - Finish submit complaints
+
+------------------------------------
+[time] Dec.1
+Changze
+  - Finishing admin view event frame
+
+Delun
+  -almost done with events' feedback
+
+Xinyu
+  - Finish RecyclerView
+Lianhao
+  - Have a structure of LoginModel, LoginView, LoginPresenter
+Andy
+  - check for creating new style
+
+------------------------------------
+[time] Nov.30
+Changze
+  - Finish all frame
+Xinyu
+  - resting
+Lianhao
+  - Review the MVP and try refactor the Login into three part
+Andy
+  - Change method of the activity
+------------------------------------
 [time] Nov.29
 Lianhao
   - starting refactor the login, and write test
+Changze
+  - learning MVP
+Xinyu
+  - getting Event mudule set up
 
 ------------------------------------
 [time] Nov.28
@@ -10,6 +94,8 @@ Xinyu
   - Finished integrating announcement
 Lianhao
   - Finish the Admin Schedule Event story
+Andy
+  - halfway through complaint activities
 ----------------------------------------
 [time] Nov.27
 Delun
@@ -54,6 +140,8 @@ Changze
   - review STAB52
 Lianhao
   - review STAB52
+Andy
+  - UI complete
 ----------------------------------------
 [time] Nov.22
 [TODO]
@@ -80,6 +168,8 @@ Changze
     ·including each fragment.xml
 Delun
   - Started the conditions of POSTCheck
+Andy
+  - start completion of UI
 ----------------------------------------
 [time] Nov.20
 [task done]
@@ -112,6 +202,8 @@ Xinyu
   - Choosing view
 Delun
   - Working on the UI page of POSTCHeck
+Andy
+  - Working on fragments
 
 -----------------------------------------
 [time] Nov.17
@@ -125,6 +217,8 @@ Lianhao
 Changze
   - Import the icon of each function(ie. Announcement, checkPOSt..)
   - Change the code of fragment_announcement
+Andy
+  - Getting famaliar with Android Studio (solve some issues)
 
 -----------------------------------------
 [time] Nov.16
@@ -137,8 +231,8 @@ Changze
 Xinyu
   - Added doc folder to the project
 Changze
-  - Leaning firebase
+  - Learning firebase
 Lianhao
-  - Leaning firebase, create Authentication and Realtime Database
-
-
+  - Learning firebase, create Authentication and Realtime Database
+Andy
+  - checking jira
