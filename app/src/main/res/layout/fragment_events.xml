@@ -15,7 +15,7 @@
             android:id="@+id/more_RSVP"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="YourEvent \n\n\n\n more"/>
+            android:text="YourEvent \n\n tap \n here \n for \n more"/>
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"

@@ -1,5 +1,6 @@
 package com.example.b07_project.ui.events;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -32,6 +33,7 @@ public class EventsFragment extends Fragment {
     private final String userID = userName.name;
     private static final String TAG = "EventRecyclerViewFragment";
     protected TextView more_btn;
+    protected TextView RSVP_display;
     protected RecyclerView mRecyclerView;
     protected EventAdapter allEventAdapter;
     protected RecyclerView.LayoutManager mLayoutManager;
@@ -54,16 +56,19 @@ public class EventsFragment extends Fragment {
             @Override
             public void run() {
                 mRecyclerView.setAdapter(allEventAdapter);
+                RSVP_display.setText("you have "+retriever.getIds().size()+" incoming events");
             }
         };
 
 
         more_btn = rootView.findViewById(R.id.more_RSVP);
+        RSVP_display = rootView.findViewById(R.id.RSVP_display);
         more_btn.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getContext(),RSVPEventActivity.class);
+                getContext().startActivity(intent);
             }
         });
 
@@ -77,6 +82,7 @@ public class EventsFragment extends Fragment {
         retriever.retrieveAllEvents(allEventAdapter);
 
         this.allEventsSet = retriever.getAllEventsSet();
+        retriever.updateIDs(userID);
         handler.postDelayed(runnable, 200);
         return rootView;
     }

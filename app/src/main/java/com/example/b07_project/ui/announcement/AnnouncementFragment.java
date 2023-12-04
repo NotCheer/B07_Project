@@ -1,6 +1,7 @@
 package com.example.b07_project.ui.announcement;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,8 +55,15 @@ public class AnnouncementFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         initDataset();
-        mAdapter = new AnnouncementAdapter(announcementSet);
-        mRecyclerView.setAdapter(mAdapter);
+        Handler handler = new Handler();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                mAdapter = new AnnouncementAdapter(announcementSet);
+                mRecyclerView.setAdapter(mAdapter);
+            }
+        };
+        handler.postDelayed(runnable, 200);
         return rootView;
     }
 

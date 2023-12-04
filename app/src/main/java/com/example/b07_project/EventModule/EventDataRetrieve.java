@@ -12,22 +12,29 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
 
 public class EventDataRetrieve {
     private List<Event> eventsSet;
     private List<Event> RSVPEventsSet;
-    private List<String> ids = new ArrayList<String>();
+    private List<String> ids;
 
     public EventDataRetrieve() {
         eventsSet = new ArrayList<Event>();
         RSVPEventsSet = new ArrayList<Event>();
+        ids = new ArrayList<String>();
     }
 
-    public List<String> getIds() {
-        return ids;
+    public EventDataRetrieve(String userID) {
+        eventsSet = new ArrayList<Event>();
+        RSVPEventsSet = new ArrayList<Event>();
+        updateIDs(userID);
     }
 
-    public List<String> getRSVPInfo (String ID) {
+    public void updateIDs(String ID) {
+        eventsSet = new ArrayList<Event>();
+        RSVPEventsSet = new ArrayList<Event>();
+        RSVPEventsSet.add(new Event("test","test","test","test",10,null));
         FirebaseDatabase db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb." +
                 "firebaseio.com/");
         DatabaseReference userRef = db.getReference();
@@ -39,8 +46,10 @@ public class EventDataRetrieve {
                 List<String> ids = new ArrayList<String>();
                 long size = snapshot.getChildrenCount();
                 for(int i=0; i<size; i++) {
-                    ids.add(snapshot.child(Integer.toString(i)).getValue(String.class));
-                    Log.d("SRetriever",ids.get(i)+"eventID got");
+                    String id = snapshot.child(Integer.toString(i)).getValue(String.class);
+                    addId(id);
+                    Log.d("SRetriever",id+" eventID got");
+                    Log.d("SRetriever",ids +" eventID got");
                 }
             }
 
@@ -49,8 +58,17 @@ public class EventDataRetrieve {
 
             }
         });
-        return ids;
+    }
 
+    public List<String> getIds() {
+        return ids;
+    }
+    public void addId(String id) {
+        this.ids.add(id);
+    }
+
+    public void addRSVP(Event event) {
+        this.RSVPEventsSet.add(event);
     }
 
     public List<Event> retrieveRSVPEvents(List<String> RSVPEventsID,RSVPEventAdapter adapter) {
@@ -83,7 +101,7 @@ public class EventDataRetrieve {
                     Event event = new Event(eventName,detail,location,time,limit, null);
 
                     Log.d("SRetriever", "have: " + event.getEventName());
-                    eventsSet.add(event);
+                    addRSVP(event);
                     Log.d("SRetriever","RSVPEventSet now have element #:"+RSVPEventsSet.size());
                     index--;
                 }
