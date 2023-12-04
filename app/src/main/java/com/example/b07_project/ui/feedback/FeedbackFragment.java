@@ -24,7 +24,7 @@ public class FeedbackFragment extends Fragment {
         binding = FragmentFeedbacksBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textFeedback;
+        final TextView textView = binding.textComplaints;
         feedbackViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

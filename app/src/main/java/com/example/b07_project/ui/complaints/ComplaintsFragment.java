@@ -25,7 +25,7 @@ public class ComplaintsFragment extends Fragment {
         binding = FragmentComplaintsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textComplaints;
+        final TextView textView = binding.noComplaints;
         complaintsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
