@@ -25,7 +25,7 @@ public class FeedbackFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_feedbacks, container, false);
+        View view = inflater.inflate(R.layout.fragment_submit_complaint, container, false);
         complaint = view.findViewById(R.id.text_complaints);
 
         db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb.firebaseio.com/");

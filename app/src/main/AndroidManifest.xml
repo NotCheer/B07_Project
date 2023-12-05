@@ -37,6 +37,8 @@
         <activity android:name=".ui.view.ViewActivity"
             android:exported="true"
             />
+        <activity android:name=".FeedBack"
+            android:exported="true"/>
         <activity
             android:name=".LoginView"
             android:exported="true"

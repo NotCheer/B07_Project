@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Event implements Serializable {
     private String eventName;
+    public String eventID;
     private String detail;
     private String location;
     private String time;
