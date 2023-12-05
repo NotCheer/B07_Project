@@ -95,7 +95,8 @@ public class Register extends AppCompatActivity {
                             }else{
                                 User user = new User(email,password,identity,name);
                                 writeNewUser(user);
-                                Intent intent = new Intent(Register.this, Login.class);
+                                Intent intent = new Intent(Register.this,
+                                        LoginView.class);
                                 startActivity(intent);
                             }
                         }
@@ -111,7 +112,7 @@ public class Register extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Register.this, Login.class);
+                Intent intent = new Intent(Register.this, LoginView.class);
                 startActivity(intent);
             }
         });

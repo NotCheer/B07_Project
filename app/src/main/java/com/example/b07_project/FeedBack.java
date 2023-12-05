@@ -1,24 +1,17 @@
 package com.example.b07_project;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.b07_project.R;
 import com.google.firebase.database.DatabaseReference;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.b07_project.databinding.FragmentFeedbacksBinding;
+//import com.example.b07_project.databinding.FragmentFeedbacksBinding;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -26,17 +19,16 @@ import java.util.Map;
 
 public class FeedBack extends AppCompatActivity {
 
-    private FragmentFeedbacksBinding binding;
+    //private FragmentFeedbacksBinding binding;
 
     private RatingBar ratingBar;
     private EditText commentInput;
     private EditText event;
-    private Button submitButton;
+    private Button submitButton, backButton;
     private DatabaseReference databaseReference;
     private Map<String, String> optionMap;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         //FeedbackViewModel feedbackViewModel =
         //        new ViewModelProvider(this).get(FeedbackViewModel.class);
 //
@@ -47,11 +39,12 @@ public class FeedBack extends AppCompatActivity {
         //feedbackViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         //return root;
         super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_feedbacks, container, false);
-        ratingBar = view.findViewById(R.id.ratingBar);
-        event = view.findViewById(R.id.event);
-        commentInput = view.findViewById(R.id.feedback);
-        submitButton = view.findViewById(R.id.buttonSubmit);
+        setContentView(R.layout.activity_feedback);
+        ratingBar = findViewById(R.id.ratingBar);
+        event = findViewById(R.id.event);
+        commentInput = findViewById(R.id.feedback);
+        submitButton = findViewById(R.id.buttonSubmit);
+        backButton = findViewById(R.id.button_back);
         databaseReference = FirebaseDatabase.getInstance().getReference("Event");
         optionMap=new HashMap<>();
         optionMap.put("hhh","0");
@@ -61,17 +54,24 @@ public class FeedBack extends AppCompatActivity {
                 submitFeedback();
             }
         });
-        return view;
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
     private void submitFeedback() {
         float rating = ratingBar.getRating();
         String comment = commentInput.getText().toString();
         String eventName = event.getText().toString();
         String idx = optionMap.get(eventName);
-        idx="0";
+        idx=UserName.getInstance().EventID;
 
         // Create a feedback object. Assuming you have a Feedback class that matches the structure in the database.
-        com.example.b07_project.ui.feedback.FeedbackFragment.Feedback feedback = new com.example.b07_project.ui.feedback.FeedbackFragment.Feedback(comment, (int) rating); // Cast rating to int if your rating is an integer in Firebase
+        com.example.b07_project.FeedBack.Feedback feedback = new com.example.b07_project.FeedBack.Feedback(comment, (int) rating); // Cast rating to int if your rating is an integer in Firebase
 
         DatabaseReference feedbackRef = databaseReference.child(idx).child("feedbacks").push();
 

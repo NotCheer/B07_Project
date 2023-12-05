@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">B07_Project</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="register">Sign up</string>
     <string name="email">Email:</string>
     <string name="password">Password:</string>
@@ -20,6 +17,9 @@
     <string name="view">ViewEvents</string>
     <string name="schedule">Schedule</string>
     <string name="complaint">Complaints</string>
+    <string name="text_complaint">Anything you want to say...</string>
+    <string name="submit">Submit</string>
+    <string name="noComplaints">There are no complaints</string>
     <string name="logout">Log Out</string>
     <string name="EventName">EventName</string>
     <string name="Detail">Detail</string>

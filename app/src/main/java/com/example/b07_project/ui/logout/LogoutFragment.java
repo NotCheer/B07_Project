@@ -13,8 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.b07_project.AdminMain;
-import com.example.b07_project.Login;
+import com.example.b07_project.LoginView;
 import com.example.b07_project.databinding.FragmentLogoutBinding;
 
 public class LogoutFragment extends Fragment {
@@ -38,7 +37,7 @@ public class LogoutFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(i, Login.class);
+                Intent intent = new Intent(i, LoginView.class);
                 startActivity(intent);
             }
         });

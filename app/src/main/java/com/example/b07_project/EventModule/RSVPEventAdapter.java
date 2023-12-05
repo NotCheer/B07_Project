@@ -13,16 +13,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.b07_project.FeedBack;
 import com.example.b07_project.R;
+import com.example.b07_project.UserName;
 import com.example.b07_project.ui.events.StudentEventActivity;
 
 import java.util.List;
 
 public class RSVPEventAdapter extends RecyclerView.Adapter<RSVPEventAdapter.EventViewHolder> {
     private List<Event> EventList;
+    private EventDataRetrieve retriever;
 
     public void setEvents(List<Event> EventList) {
         this.EventList = EventList;
+    }
+
+    public void setRetriever(EventDataRetrieve retriever) {
+        this.retriever = retriever;
     }
 
     public List<Event> getEventList() {
@@ -93,19 +100,16 @@ public class RSVPEventAdapter extends RecyclerView.Adapter<RSVPEventAdapter.Even
         holder.getNameTextView().setText(a.getEventName());
         holder.getTimeTextView().setText(a.getTime());
         holder.getLocationTextView().setText(String.format("%s(max attendee:%d)", a.getLocation(), a.getLimit()));
-
-
-
+        holder.getButton().setText("feedback");
         holder.getButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int p = holder.getBindingAdapterPosition();
-                Intent intent = new Intent(holder.getContext(), StudentEventActivity.class);
+                Intent intent = new Intent(holder.getContext(), FeedBack.class);
                 Event eventInfo = EventList.get(p);
                 String id = Integer.toString(EventList.size()-p-1);
-                Log.d("Events","clicked"+Integer.toString(p));
-                intent.putExtra("eventInfo", eventInfo);
-                intent.putExtra("eventID", id);
+                p = retriever.getIds().size() - p - 1;
+                UserName.getInstance().EventID = retriever.getIds().get(p);
                 holder.getButton().getContext().startActivity(intent);
             }
         });

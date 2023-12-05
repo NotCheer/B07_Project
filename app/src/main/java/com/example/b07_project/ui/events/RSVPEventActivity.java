@@ -62,6 +62,7 @@ public class RSVPEventActivity extends AppCompatActivity {
             public void run() {
                 RSVPEventsSet = retriever.getRSVPEventsSet();
                 mAdapter = new RSVPEventAdapter(RSVPEventsSet);
+                mAdapter.setRetriever(retriever);
                 mRecyclerView.setAdapter(mAdapter);
                 Log.d("RSVP","3 | have RSVP size" + retriever.getIds().size());
             }

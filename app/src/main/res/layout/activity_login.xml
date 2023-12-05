@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="15dp"
     android:gravity="center"
-    tools:context=".Login">
+    tools:context=".LoginView">
 
 
     <TextView
@@ -18,34 +18,27 @@
         android:gravity="center"
         android:layout_marginBottom="20dp"
         />
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/name"
+        android:hint="@string/name"
+        android:textSize="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
-            android:hint="@string/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:hint="@string/email"
+        android:textSize="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
-            android:hint="@string/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/btn_login"
         android:text="@string/login"

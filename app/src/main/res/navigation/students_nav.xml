@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/students_navigation"
     app:startDestination="@+id/navigation_announcement">
 
     <fragment
@@ -15,7 +14,7 @@
         android:id="@+id/navigation_feedback"
         android:name="com.example.b07_project.ui.feedback.FeedbackFragment"
         android:label="@string/title_feed"
-        tools:layout="@layout/fragment_feedbacks" />
+        tools:layout="@layout/fragment_submit_complaint" />
 
     <fragment
         android:id="@+id/navigation_events"
