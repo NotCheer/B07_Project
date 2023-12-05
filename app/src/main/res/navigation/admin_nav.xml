@@ -9,7 +9,7 @@
         android:id="@+id/navigation_post"
         android:name="com.example.b07_project.ui.post.PostFragment"
         android:label="@string/post"
-        tools:layout="@layout/fragment_postann"/>
+        tools:layout="@layout/fragment_post"/>
 
     <fragment
         android:id="@+id/navigation_view"

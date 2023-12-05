@@ -20,6 +20,9 @@
     <string name="view">ViewEvents</string>
     <string name="schedule">Schedule</string>
     <string name="complaint">Complaints</string>
+    <string name="text_complaint">Anything you want to say...</string>
+    <string name="submit">Submit</string>
+    <string name="noComplaints">There are no complaints</string>
     <string name="logout">Log Out</string>
     <string name="EventName">EventName</string>
     <string name="Detail">Detail</string>
