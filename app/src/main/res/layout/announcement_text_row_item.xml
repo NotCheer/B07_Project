@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/lineAnnouncementTitle"
         android:layout_width="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_height="30dp"
         android:text="@string/element_text" />
 
@@ -20,7 +20,7 @@
         android:id="@+id/lineAnnouncementContent"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:text="@string/element_text" />
+        android:text="time" />
 
     <TextView
         android:id="@+id/lineAnnouncementDate"

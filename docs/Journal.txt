@@ -2,6 +2,16 @@
 Lianhao
   - Finish the Mockito Test for LoginPresenter, coverage 100%
 
+Delun
+  - Megere my branch to the main branch
+
+Changze
+  - Merge the final projects
+
+Andy
+  - Merge to main
+  - changing style
+
 [time] Dec.3
 Changze
   - Finishing admin view event activity recycle view, which can view the event detail
@@ -15,6 +25,9 @@ Xinyu
 Lianhao
   - Complete LoginModel, LoginView, LoginPresenter
   - Working with writing Mockito Test for the LoginPresenter
+Andy
+  - Finish view complaints activity
+  - debug
 
 ------------------------------------
 [time] Dec.2
@@ -36,6 +49,8 @@ Xinyu
 Lianhao
   - Meet some problem of the functionality of LoginPresenter
   - Fix the problem of LoginPresenter
+Andy
+  - Finish submit complaints
 
 ------------------------------------
 [time] Dec.1
@@ -49,6 +64,8 @@ Xinyu
   - Finish RecyclerView
 Lianhao
   - Have a structure of LoginModel, LoginView, LoginPresenter
+Andy
+  - check for creating new style
 
 ------------------------------------
 [time] Nov.30
@@ -58,7 +75,8 @@ Xinyu
   - resting
 Lianhao
   - Review the MVP and try refactor the Login into three part
-
+Andy
+  - Change method of the activity
 ------------------------------------
 [time] Nov.29
 Lianhao
@@ -76,6 +94,8 @@ Xinyu
   - Finished integrating announcement
 Lianhao
   - Finish the Admin Schedule Event story
+Andy
+  - halfway through complaint activities
 ----------------------------------------
 [time] Nov.27
 Delun
@@ -120,6 +140,8 @@ Changze
   - review STAB52
 Lianhao
   - review STAB52
+Andy
+  - UI complete
 ----------------------------------------
 [time] Nov.22
 [TODO]
@@ -146,6 +168,8 @@ Changze
     ·including each fragment.xml
 Delun
   - Started the conditions of POSTCheck
+Andy
+  - start completion of UI
 ----------------------------------------
 [time] Nov.20
 [task done]
@@ -178,6 +202,8 @@ Xinyu
   - Choosing view
 Delun
   - Working on the UI page of POSTCHeck
+Andy
+  - Working on fragments
 
 -----------------------------------------
 [time] Nov.17
@@ -191,6 +217,8 @@ Lianhao
 Changze
   - Import the icon of each function(ie. Announcement, checkPOSt..)
   - Change the code of fragment_announcement
+Andy
+  - Getting famaliar with Android Studio (solve some issues)
 
 -----------------------------------------
 [time] Nov.16
@@ -203,8 +231,8 @@ Changze
 Xinyu
   - Added doc folder to the project
 Changze
-  - Leaning firebase
+  - Learning firebase
 Lianhao
-  - Leaning firebase, create Authentication and Realtime Database
-
-
+  - Learning firebase, create Authentication and Realtime Database
+Andy
+  - checking jira

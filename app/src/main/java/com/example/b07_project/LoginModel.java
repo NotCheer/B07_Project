@@ -26,7 +26,8 @@ public class LoginModel {
                    if(email.equals(snapshot.child("email").getValue(String.class))
                            && password.equals(snapshot.child("password")
                            .getValue(String.class)) && snapshot.exists()){
-                    presenter.indicateJump(snapshot.child("identity").getValue(String.class));
+                       UserName.getInstance().name=name;
+                       presenter.indicateJump(snapshot.child("identity").getValue(String.class));
                    }else {
                        presenter.Toast("Email or Password or Name Wrong");
                    }

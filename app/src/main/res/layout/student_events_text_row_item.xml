@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:divider="@drawable/common_google_signin_btn_icon_dark"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/lineEventName"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="30dp"
+            android:text="name" />
+        <TextView
+            android:id="@+id/lineEventTime"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="time" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+        <TextView
+            android:id="@+id/lineEventLocationAndMaxNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/element_text" />
+        <Button
+            android:id="@+id/buttonEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>

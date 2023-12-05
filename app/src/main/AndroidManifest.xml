@@ -16,15 +16,22 @@
             android:name=".StudentsMain"
             android:exported="true"
             />
+        <activity android:name=".ui.events.StudentEventActivity"
+            android:exported="false"
+            />
         <activity
             android:name=".AdminMain"
             android:exported="true"
+            />
+        <activity android:name=".ui.events.RSVPEventActivity"
+            android:exported="false"
             />
         <activity
             android:name=".Register"
             android:exported="false"
             />
-        <activity android:name=".ui.announcement.AnnouncementActivity"
+        <activity
+            android:name=".ui.announcement.AnnouncementActivity"
             android:exported="true"
             />
         <activity android:name=".ui.view.ViewActivity"
@@ -33,7 +40,6 @@
         <activity
             android:name=".LoginView"
             android:exported="true"
-            android:label="@string/app_name"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
