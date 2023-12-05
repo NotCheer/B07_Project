@@ -1,0 +1,390 @@
+The main tasks done by each member of the group
+
+
+Delun
+	- The front-end interface & backend codes for students to check POSt (user story 2)
+	- The front-end interface & backend codes for students to submit Events' comments & rates (user story 6)
+	- Including debug for own parts
+
+Lianhao
+	- The front-end interface & backend codes for users to login (user story 1)
+	- The front-end interface & backend codes for admin to post Announcement (user story 7)
+	- The front-end interface & backend codes for admin to schedule Events (user story 8)
+	- Refactor Login by MVP (test)
+	- Test for LoginPresenter (test)
+	- Including debug for own parts
+
+
+Changze 
+	- All front-end interface frameworks for Admin and Student (The theme framework of the project)
+	- The front-end interface & partial backend codes for admin to post Announcements (user story 7)
+	- The front-end interface & backend codes codes for admin to view Events' comments && mean numercial rate (user story 9)
+	- Recording the meeting and summarize the tasks for each member
+	- Including debug for own parts
+
+Xinyu
+	- The front-end interface & backend codes for students view Announcements & Events (user story 4)
+	- The front-end interface & backend codes for students RSVP for Events (user story 5)
+	- Introducing recycleView to project
+	- Helping team members to debug backend codes
+	- Create project in GitHub and organzing team members to use Jira
+
+Andy
+	- The front-end interface & backend codes for students to submit complaints (user story 3)
+	- The front-end interface & backend codes for admin to view complaints (user story 10)
+	- Create a style for text boxes
+	- Including debug for own parts
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+A summary of each of the Scrum meetings
+
+----------------------------------------------
+----------------------------------------------
+Sprint Planning:
+
+In response to the requirements of user story, we summarized the following outline：
+- Activities
+  - loginActivity
+  - createAccount
+    - Student 
+      - checkPOStRequirement
+      - submitComplaint
+      - viewComplaint(admin)
+      - viewActivity
+      - viewActivityDetail
+      - RSVPForActivity
+      - viewPastActivity (inherited viewActivity)
+      - ratePastActivity 
+    - admin
+      - postAnnouncements
+      - postActivityActivity
+      - viewFeedback
+      - viewComplaints
+- Database
+  - UserID
+    - name: string
+    - password: hashed string
+    - identity: string student/admin
+    - scheduled event: list[id]
+  - EventsID
+    - name: string
+    - description: string
+    - participants: list[id]
+    - time: string
+    - date: string
+    - feedback: {int, string}
+  - Complaints
+    - time: string
+    - content: string
+  - Announcement
+    - time: string
+    - content: string
+    - sender: id
+
+----------------------------------------------
+----------------------------------------------
+Daily Scrum (Standup): 
+
+[time] Dec.4
+Lianhao
+  - Finish the Mockito Test for LoginPresenter, coverage 100%
+
+Delun
+  - Megere my branch to the main branch
+
+Changze
+  - Merge the final projects
+
+Andy
+  - Merge to main
+  - changing style
+
+[time] Dec.3
+Changze
+  - Finishing admin view event activity recycle view, which can view the event detail
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning runner && handler
+    - solve problem by using runner && handler
+Xinyu
+  - Introduce handler to resolve firebase latency issue
+  - reloved mokito not running issue (match jdk with newer mokito runnner)
+Lianhao
+  - Complete LoginModel, LoginView, LoginPresenter
+  - Working with writing Mockito Test for the LoginPresenter
+Andy
+  - Finish view complaints activity
+  - debug
+
+------------------------------------
+[time] Dec.2
+Changze
+  - Finishing admin view event recycle view
+  - debugging the view event
+    - Solved the problem that the adapter is generated in the view after refreshing
+    - learning Override onResume
+    - solve problem by using onResume
+
+Delun
+  - Finished on submitting feedbacks
+
+Xinyu
+  - Get UserName.java set up to store user
+    name across activities
+  - Helping other with recyclerView
+  - Resolving merge conflicts
+Lianhao
+  - Meet some problem of the functionality of LoginPresenter
+  - Fix the problem of LoginPresenter
+Andy
+  - Finish submit complaints
+
+------------------------------------
+[time] Dec.1
+Changze
+  - Finishing admin view event frame
+
+Delun
+  -almost done with events' feedback
+
+Xinyu
+  - Finish RecyclerView
+Lianhao
+  - Have a structure of LoginModel, LoginView, LoginPresenter
+Andy
+  - check for creating new style
+
+------------------------------------
+[time] Nov.30
+Changze
+  - Finish all frame
+Xinyu
+  - resting
+Lianhao
+  - Review the MVP and try refactor the Login into three part
+Andy
+  - Change method of the activity
+------------------------------------
+[time] Nov.29
+Lianhao
+  - starting refactor the login, and write test
+Changze
+  - learning MVP
+Xinyu
+  - getting Event mudule set up
+
+------------------------------------
+[time] Nov.28
+Changze
+  - make admin switch fragments
+Xinyu
+  - Finished integrating announcement
+Lianhao
+  - Finish the Admin Schedule Event story
+Andy
+  - halfway through complaint activities
+----------------------------------------
+[time] Nov.27
+Delun
+  - Finished Backend of PostCheck
+Changze
+  - Finish admin UI interface
+Xinyu
+  - Finished Integrating firebase
+Lianhao
+  - Debugging the Schedule Event
+----------------------------------------
+[time] Nov.26
+Delun
+  - Finished UI page of PostCheck
+Xinyu
+  - debugging
+Lianhao
+  - do lab 5
+----------------------------------------
+[time] Nov.25
+Changze
+  - Finish students UI interface
+  - make switch students fragments
+Xinyu
+  - debuging
+Lianhao
+  -Fix the Admin Schedule Event
+----------------------------------------
+[time] Nov.24
+Changze
+  - Finish initial AnnoucementFragment.java
+  - Finish initial CheckPostFragment.java
+Xinyu
+  - Starting integrating announcement
+Lianhao
+  - Half way of doing Admin Schedule Event, create object event, consider useing realtimedatabase to store info of events
+----------------------------------------
+[time] Nov.23
+Delun
+  - Choose to use selection bar for options to students.
+Changze
+  - review STAB52
+Lianhao
+  - review STAB52
+Andy
+  - UI complete
+----------------------------------------
+[time] Nov.22
+[TODO]
+Changze
+  - Create students four function's fragments
+  - Create admin four function's fragments
+Lianhao
+  - Create the UI of Schedule Event
+
+----------------------------------------
+[time] Nov.21
+[task done]
+Xinyu
+  - Finished work on Announcement module
+[to do]
+Xinyu
+  - Integrate announcement with fire base
+  - Implement announcement in home page
+Lianhao
+  - Finish the Activity of Login
+Changze
+  - Finish the other three functions'ui(ie. CheckPOSt, Events, Feedback)
+    ·including each ui fragment & viewmodel
+    ·including each fragment.xml
+Delun
+  - Started the conditions of POSTCheck
+Andy
+  - start completion of UI
+----------------------------------------
+[time] Nov.20
+[task done]
+Lianhao
+  - Finish the Activity of Signup
+Xinyu
+  - Implementing recycler view
+Delun
+  - Choose a select bar on POSTCheck for convienince
+
+-----------------------------------------
+
+[time] Nov.19
+[task done]
+Lianhao
+  - Doing Lab4
+Changze
+  - Finish the ui of Annoucenment inclusing Fragment & ViewModel
+Xinyu
+  - Finalizing announcement fragment
+
+-----------------------------------------
+[time] Nov.18
+[task done]
+Lianhao
+  - Finish the Layout of SignUp
+Changze
+  - Finish the fragment_announcement and revise the ui of file Annoucenment
+Xinyu
+  - Choosing view
+Delun
+  - Working on the UI page of POSTCHeck
+Andy
+  - Working on fragments
+
+-----------------------------------------
+[time] Nov.17
+[task done]
+Delun
+  - Started the POST check page
+Xinyu
+  - Finished announcement.java
+Lianhao
+  - Finish the Layout of Login
+Changze
+  - Import the icon of each function(ie. Announcement, checkPOSt..)
+  - Change the code of fragment_announcement
+Andy
+  - Getting famaliar with Android Studio (solve some issues)
+
+-----------------------------------------
+[time] Nov.16
+[task done]
+  - All member reviewing cscb36, nothing done
+
+-----------------------------------------
+[time] Nov.15
+[task done]
+Xinyu
+  - Added doc folder to the project
+Changze
+  - Learning firebase
+Lianhao
+  - Learning firebase, create Authentication and Realtime Database
+Andy
+  - checking jira
+
+
+
+
+----------------------------------------------
+----------------------------------------------
+Sprint review:
+
+Completed Items:
+
+	- User Registration and Login: Lianhao completed the Login and Signup functionality, including the creation of LoginModel, LoginView, and LoginPresenter. He also wrote Mockito tests for LoginPresenter, achieving 100% test coverage.
+
+	- Admin and Student UI: Changze completed the UI for both the admin and student roles. This includes the creation of various fragments for different functions such as Announcements and CheckPost.
+
+	- Event Module: Changze and Xinyu worked on the Event module. Changze completed the admin view event activity recycle view, while Xinyu set up the Event module and integrated it with Firebase.
+
+	- Feedback and Complaints: Delun completed the backend for submitting feedbacks and Andy completed the view complaints activity.
+
+	- Announcement Module: Xinyu completed the Announcement module, including integrating it with Firebase and implementing it in the home page.
+
+	- PostCheck: Delun completed the UI page and backend of PostCheck.
+
+Incomplete Items:
+
+	- None
+
+During the sprint, various functionalities were demonstrated, such as the Login and Signup functionality, the admin and student UI, the Event module, the Feedback and Complaints functionality, the Announcement module, and the PostCheck functionality.
+
+Feedback and Discussion:
+
+	- The team faced several challenges during the sprint, such as issues with Firebase latency and Mockito not running. However, they were able to resolve these issues and learn from them.
+
+Backlog Update:
+
+	- Based on the progress made during the sprint, the team has several tasks lined up for the next sprint:
+
+		Continue refining and debugging the existing functionalities.
+		Integrate more features with Firebase.
+		Continue learning and applying the MVP pattern.
+-------------------------------------------------
+-------------------------------------------------
+Sprint Retrospective:
+
+What went well:
+
+	- Collaboration and Problem Solving: The team demonstrated strong collaboration and problem-solving skills. When issues arose, such as the Firebase latency issue and the Mockito not running issue, the team was able to quickly identify and resolve them.
+
+	- Feature Development: The team completed a significant amount of work during this sprint, including the development of several key features such as user registration and login, admin and student UI, event module, feedback and complaints functionality, announcement module, and PostCheck functionality.
+
+	- Testing: The team did a good job of writing tests for the developed features, as evidenced by the 100% test coverage achieved for the LoginPresenter.
+
+What didn't go well:
+
+	- Firebase Latency: The team encountered issues with Firebase latency. Although they were able to resolve the issue by introducing a handler, this was a challenge that slowed down the team's progress.
+
+	- Mockito Not Running Issue: The team faced issues with Mockito not running, which may have impacted the team's ability to thoroughly test their code.
+
+What could be improved:
+
+	- Firebase Integration: The team could work on improving their understanding and usage of Firebase to prevent future issues related to latency or other unexpected problems.
+
+	- Testing: While the team did a good job of testing, the issues faced with Mockito suggest that there may be room for improvement in this area. The team could consider investing more time in understanding and resolving testing-related issues.
+
+	- Learning and Applying the MVP Pattern: The team started learning the MVP pattern and applying it to their project. However, there is still room for improvement and the team could benefit from further learning and practice in this area.

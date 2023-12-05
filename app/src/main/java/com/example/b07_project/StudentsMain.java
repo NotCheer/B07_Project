@@ -1,6 +1,7 @@
 package com.example.b07_project;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,9 +17,12 @@ public class StudentsMain extends AppCompatActivity {
 
     private ActivityStudentsMainBinding binding;
 
+    private UserName userName = UserName.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("UserName",userName.name);
 
         binding = ActivityStudentsMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
