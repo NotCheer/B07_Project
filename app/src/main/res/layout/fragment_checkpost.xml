@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:padding="15dp"
         android:gravity="center"
-        tools:context=".Login">
+        tools:context=".ui.checkpost.CheckPOStFragment">
 
         <TextView
             android:text="POST Check"
@@ -24,7 +24,6 @@
             android:layout_marginBottom="20dp"
             />
         <TextView
-            android:id="@+id/textViewProgram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select the Computer Science Program you want to enter"
@@ -37,7 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"/>
         <TextView
-            android:id="@+id/textViewGrade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select your grade in CSCA48"
@@ -50,7 +48,6 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"/>
         <TextView
-            android:id="@+id/textViewGrade2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select your grade in CSC/MATA67"
@@ -63,7 +60,6 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"/>
         <TextView
-            android:id="@+id/textViewGrade3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select your grade in MATA22"
@@ -76,7 +72,6 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"/>
         <TextView
-            android:id="@+id/textViewGrade4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select your grade in MATA31"
@@ -89,7 +84,6 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"/>
         <TextView
-            android:id="@+id/textViewGrade5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select your grade in MATA37"
