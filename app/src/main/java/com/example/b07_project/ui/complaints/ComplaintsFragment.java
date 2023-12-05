@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.b07_project.R;
@@ -28,7 +29,7 @@ public class ComplaintsFragment extends Fragment {
     ScrollView ComplaintView;
     LinearLayout linearLayout;
     TextView textView;
-    Drawable drawable = getResources().getDrawable(R.drawable.text_box);
+    Drawable drawable;
     FirebaseDatabase db;
     DatabaseReference userRef;
 
@@ -40,6 +41,7 @@ public class ComplaintsFragment extends Fragment {
         ComplaintView = view.findViewById(R.id.ComplaintView);
         linearLayout = view.findViewById(R.id.displayComplaints);
         textView = view.findViewById(R.id.noComplaints);
+        drawable = ContextCompat.getDrawable(getContext(),R.drawable.text_box);
 
         LinearLayout.LayoutParams params= new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
