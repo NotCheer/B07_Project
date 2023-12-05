@@ -1,15 +1,14 @@
 package com.example.b07_project.ui.announcement;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +19,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.example.b07_project.AnnouncementModule.Announcement;
 import com.example.b07_project.AnnouncementModule.AnnouncementAdapter;
 import com.example.b07_project.R;
-import com.example.b07_project.databinding.FragmentAnnouncementBinding;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -31,8 +29,7 @@ public class AnnouncementFragment extends Fragment {
 
     private List<Announcement> announcementSet;
 
-    private static final String TAG = "RecyclerViewFragment";
-    private static final String KEY_LAYOUT_MANAGER = "layoutManager";
+    private static final String TAG = "AnnouncementRecyclerViewFragment";
     protected RecyclerView mRecyclerView;
     protected AnnouncementAdapter mAdapter;
     protected RecyclerView.LayoutManager mLayoutManager;
@@ -42,7 +39,7 @@ public class AnnouncementFragment extends Fragment {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initDataset();
+
     }
 
     public void setAnnouncementSet (List<Announcement> ann) {
@@ -51,18 +48,27 @@ public class AnnouncementFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.recycler_view_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.announcement_recycler_view_fragment, container, false);
         rootView.setTag(TAG);
         //init RecyclerView
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new AnnouncementAdapter(announcementSet);
-        mRecyclerView.setAdapter(mAdapter);
+        initDataset();
+        Handler handler = new Handler();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                mAdapter = new AnnouncementAdapter(announcementSet);
+                mRecyclerView.setAdapter(mAdapter);
+            }
+        };
+        handler.postDelayed(runnable, 200);
         return rootView;
     }
 
     private void initDataset() {
+        //announcementSet.add(new Announcement("a","b","c"));
         db = FirebaseDatabase.getInstance("https://b07project-f0761-default-rtdb." +
                 "firebaseio.com/");
         announcementRef = db.getReference();
@@ -80,9 +86,13 @@ public class AnnouncementFragment extends Fragment {
                     // Get the values from the dataSnapshot and create an Announcement object
                     Log.d("retriever", "looping");
                     String ID = Long.toString(index);
+                    Log.d("id", "retrieving");
                     String title = dataSnapshot.child(ID).child("title").getValue(String.class);
+                    Log.d("title", "retrieving");
                     String content = dataSnapshot.child(ID).child("content").getValue(String.class);
+                    Log.d("content", "retrieving");
                     String date = dataSnapshot.child(ID).child("date").getValue(String.class);
+                    Log.d("data", "retrieving");
 
                     Announcement announcement = new Announcement(title, content, date);
                     Log.d("retriever", "have: "+announcement.getContent());
@@ -94,13 +104,14 @@ public class AnnouncementFragment extends Fragment {
             }
 
             public void onCancelled(DatabaseError databaseError) {
-                // Handle the error case, if any
+                // no effect here
             }
         });
     }
 
 
-    /**
+    /** backup code
+     *
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         AnnouncementViewModel announcementViewModel =

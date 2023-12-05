@@ -15,12 +15,15 @@
     <string name="title_feed">Feedback\n</string>
     <string name="title_event">Event\n</string>
     <string name="title_Check">CheckPOSt</string>
-    <string name="back">back</string>
+    <string name="back">Back</string>
     <string name = "post">Post</string>
     <string name="view">ViewEvents</string>
     <string name="schedule">Schedule</string>
     <string name="complaint">Complaints</string>
     <string name="logout">Log Out</string>
+    <string name="EventName">EventName</string>
+    <string name="Detail">Detail</string>
+    <string name="comment">Comment</string>
     <string-array name="spinner_program_data">
         <item>Please select a program</item>  <!-- Default unselected item -->
         <item>Specialist</item>
@@ -45,4 +48,6 @@
         <item>F (0-49)</item>
         <!-- more items as needed -->
     </string-array>
+    <string name="detail">detail</string>
+    <string name="rsvp">RSVP</string>
 </resources>
